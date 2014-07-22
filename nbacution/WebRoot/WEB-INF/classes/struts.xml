@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <!--<constant name="struts.i18n.encoding" value="UTF-8"></constant>--> 
+    
+    <!--<include file="com/useeasy/frame/struts-frame.xml"/>-->
+    <include file="com/useeasy/auction/struts-auction.xml"/>
+     <include file="com/useeasy/auction/intenetView/xml/struts-view.xml"/>
+     <include file="com/useeasy/auction/notice/xml/struts-notice.xml"/>
+     <include file="com/useeasy/auction/canvass_business_orders/xml/struts-business.xml"/>
+     <include file="com/useeasy/aucton/calendar/xml/struts-calendar.xml"></include>
+     <include file="com/useeasy/auction/vocation/xml/struts-vocation.xml"></include>
+      <include file="com/useeasy/auction/pmhinfo/xml/struts-pmhinfomessage.xml"></include>
+    <package name="struts-base" namespace="/" extends="struts-default">
+    
+    	<interceptors>
+    		<interceptor-stack name="defaultStack-authority">
+    			<interceptor-ref name="authority"/>
+    			<interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+    		<interceptor name="authority" class="com.useeasy.frame.base.AuthorityInterceptor"></interceptor>
+    	</interceptors>
+    	<!--<default-interceptor-ref name="defaultStack-base"></default-interceptor-ref>-->
+    	
+    	<default-action-ref name="index"></default-action-ref>
+    	
+    	<global-results>								
+    		<result name="sys_error" type="dispatcher">/WEB-INF/pages/sys/base/errorInfo.jsp</result>
+    		<result name="default" type="dispatcher">/WEB-INF/pages/useeasy/frame/base/default.jsp</result>
+    		<result name="sessionDestory" type="redirectAction">
+    			<param name="actionName">index</param>
+    			<param name="namespace">/</param>
+    		</result>
+    		 <result name="pmhRegister" type="dispatcher">WEB-INF/pages/useeasy/auction/register/pmhRegister.jsp</result>
+    	</global-results>
+    	
+    	<!--<global-exception-mappings>
+    		<exception-mapping exception="java.lang.Exception" result="sys_error"></exception-mapping>
+    	</global-exception-mappings>-->
+    	
+    	<action name="index">
+    		<result  name="success" type="dispatcher">/WEB-INF/pages/useeasy/frame/base/sessionDestory.jsp</result>
+    		<interceptor-ref name="defaultStack"></interceptor-ref>
+    	</action>
+    	
+    </package>
+
+</struts>

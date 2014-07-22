@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.bean.SystemPrivilege" table="SystemPrivilege" catalog="pmh" schema="dbo">
+	 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Integer" unsaved-value="0" >
+			<column name="id_num"  />
+			<generator class="identity">
+            </generator>
+        </id>
+        
+        <property name="privilageName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="privilageName" length="50" />
+        </property>
+        <property name="privilageCName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="privilageCName" length="50" />
+        </property>
+        <property name="privilageValue" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="privilageValue" length="50" />
+        </property>
+         
+        <set name="emps" table="privilege_account" lazy="false"  inverse="true" >
+            <key column="privilege"></key>
+            <many-to-many class="com.useeasy.auction.bean.AuctionAccount" column="emps"></many-to-many>
+        </set>
+     </class>
+     
+</hibernate-mapping>

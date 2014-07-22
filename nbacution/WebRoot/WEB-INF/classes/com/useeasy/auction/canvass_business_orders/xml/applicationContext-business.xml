@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="
+     http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+     
+    <!-- action -->
+	<bean name="businessAction" class="com.useeasy.auction.canvass_business_orders.action.BusinessAction" scope="prototype">
+	     <property name="businessDao" ref="businessDao"/>
+	</bean>
+	
+ 
+	
+	
+	<!--   service  &  dao    -->
+	<bean id="businessDao" class="com.useeasy.auction.canvass_business_orders.imp.BusinessImp">
+	      <property name="sessionFactory" ref="sessionFactory" />  
+	</bean>
+	 
+	
+</beans>

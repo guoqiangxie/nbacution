@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="view" namespace="/" extends="struts-base">
+    	
+    	<action name="inteneterAction_*" class="inteneterAction" method="{1}">
+    	<result name="addUI">/WEB-INF/pages/useeasy/auction/inteneterView/addUI.jsp</result>
+    	<result name="suc">/WEB-INF/pages/useeasy/auction/inteneterView/result.jsp</result>
+    	<result name="listView">/WEB-INF/pages/useeasy/auction/inteneterView/veiwList.jsp</result>
+        </action>
+      
+    </package>
+	
+</struts>

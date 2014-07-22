@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="Vocation" location="448,220" size="630,245">
+    <action name="auctionIndexVocationnews_*" location="65,50" size="150,125">
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="vocationlistall.jsp" />
+      </result>
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="vocationlistall.jsp" />
+      </result>
+      <result name="index_addvocation">
+        <resourceEdge source="index_addvocation" routing="0" target="indexVocationNews.jsp" />
+      </result>
+      <result name="update_manager">
+        <resourceEdge source="update_manager" routing="0" target="lonymessage.jsp" />
+      </result>
+      <result name="indexsinglemessage">
+        <resourceEdge source="indexsinglemessage" routing="0" target="indexlonymessage.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="vocationlistall.jsp" path="/WEB-INF/pages/useeasy/auction/vocation/vocationlistall.jsp" location="10,275" size="150,55" />
+  <webResource name="indexVocationNews.jsp" path="/WEB-INF/pages/useeasy/auction/vocation/indexVocationNews.jsp" location="389,65" size="150,55" />
+  <webResource name="lonymessage.jsp" path="/WEB-INF/pages/useeasy/auction/vocation/lonymessage.jsp" location="862,65" size="150,55" />
+  <webResource name="indexlonymessage.jsp" path="/WEB-INF/pages/useeasy/auction/vocation/indexlonymessage.jsp" location="1127,275" size="150,55" />
+</Struts2Diagram>
+

@@ -1,0 +1,5 @@
+body{margin:0px; background:url(../../images/window/window_bg.gif) repeat;}
+.font{margin:16px 26px; font:14px "ËÎÌו"; color:#555; line-height:30px;}
+.close{padding-bottom:20px; text-align:center;}
+.close a{background:url(../../images/window/close_off.gif) no-repeat; width:54px; height:28px; display:inline-block;}
+.close a:hover{background:url(../../images/window/close_on.gif) no-repeat; width:54px; height:28px;}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="notice" namespace="/" extends="struts-base" >
+    	
+    	<action name="noticeAction_*" class="noticeAction" method="{1}">
+    	  <result name="addUI">/WEB-INF/pages/useeasy/auction/notice/add.jsp</result>
+          <result name="cindex">/WEB-INF/pages/useeasy/auction/notice/noticeList.jsp</result>
+          <result name="update">/WEB-INF/pages/useeasy/auction/notice/update.jsp</result>
+          <result name="getindextop">/WEB-INF/pages/useeasy/auction/notice/showIndex.jsp</result> 
+          <result name="get">/WEB-INF/pages/useeasy/auction/notice/get.jsp</result>
+          <result name="geAll">/WEB-INF/pages/useeasy/auction/notice/getmore.jsp</result>
+          <result name="input">/WEB-INF/pages/useeasy/auction/notice/add.jsp</result>
+        </action>
+      
+    </package>
+	
+</struts>

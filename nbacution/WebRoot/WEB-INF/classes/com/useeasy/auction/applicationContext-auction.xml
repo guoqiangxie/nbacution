@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="
+     http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+     
+    <!-- action -->
+	<bean name="auctionIndex" class="com.useeasy.auction.action.AuctionIndexAction">
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iItemInfo" ref="itemInfoService"></property>
+		<property name="iCompanyInfo" ref="companyInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+		<property name="iAuctionGuide" ref="auctionGuideService"></property>
+		<property name="iAuctionvocation" ref="indexvocationService"></property>
+	 
+		
+	</bean>
+	
+	
+	<!--行业动态信息-->
+	  <bean id="indexvocationnewsdao" class="com.useeasy.auction.vocationdao.AuctionVocationDao">
+	 <property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+
+     <bean id="indexvocationService" class="com.useeasy.auction.vocationserver.AuctionVocationServiceImp">
+	 <property name="indexvocationDao" ref="indexvocationnewsdao"/>
+	</bean>
+	<!--  -->
+	<!--拍卖会信息 -->
+	
+	<bean id="indexmessagedao" class="com.useeasy.auction.pmhinfo.pmhinfodao.AuctionIndexMessageHibernateDao">
+	 <property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="indexmessageService" class="com.useeasy.auction.pmhinfo.pmhinfoserver.AuctionIndexMessageImp">
+	 <property name="indexmDao" ref="indexmessagedao"/>
+	</bean> 
+	
+	<!--  -->
+	<bean name="validationCode" class="com.useeasy.auction.action.ValidationCodeAction"/>
+	
+	<bean name="uploadManage" class="com.useeasy.auction.action.UploadManageAction"/>
+	
+	<bean name="auctionLogin" class="com.useeasy.auction.action.AuctionLoginAction">
+		<property name="iAccountInfo" ref="accountInfoService"></property>
+		<property name="iAdminInfo" ref="adminInfoService"></property>
+		<property name="iCompanyInfo" ref="companyInfoService"></property>
+		<property name="iGuestInfo" ref="guestInfoService"></property>
+	</bean>
+	
+	<bean name="registerManage" class="com.useeasy.auction.action.RegisterManageAction">
+		<property name="iAccountInfo" ref="accountInfoService"></property>
+		<property name="iGuestInfo" ref="guestInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+	</bean>
+	
+	<bean name="recoverPassManage" class="com.useeasy.auction.action.RecoverPassManageAction">
+		<property name="iAccountInfo" ref="accountInfoService"></property>
+		<property name="iGuestInfo" ref="guestInfoService"></property>
+		<property name="iPassRecover" ref="passRecoverService"></property>
+	</bean>
+	
+	<bean name="guestManage" class="com.useeasy.auction.action.GuestManageAction">
+		<property name="iGuestInfo" ref="guestInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+		<property name="iAccountInfo" ref="accountInfoService"></property>
+		
+	</bean>
+	
+	<bean name="companyManage" class="com.useeasy.auction.action.CompanyManageAction">
+		<property name="iCompanyInfo" ref="companyInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+		<property name="iAccountInfo" ref="accountInfoService"></property>
+	</bean>
+	
+	<bean name="auctionManage" class="com.useeasy.auction.action.AuctionManageAction">
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+		<property name="iAuctionTeamType" ref="auctionTeamTypeService"></property>
+		<property name="iItemInfo" ref="itemInfoService"></property>
+		
+	</bean>
+	
+	<bean name="itemManage" class="com.useeasy.auction.action.ItemManageAction" >
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iItemInfo" ref="itemInfoService"></property>
+		<property name="iAuctionTeamType" ref="auctionTeamTypeService"></property>
+		<property name="iItemDetailInfo" ref="itemDetailInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+		<property name="importPersonService" ref="importPersonService"></property>
+		
+	</bean>
+	
+	<bean name="biddingManage" class="com.useeasy.auction.action.BiddingManageAction">
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iItemInfo" ref="itemInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+	
+	</bean>
+	
+	<bean name="guestApplication" class="com.useeasy.auction.action.GuestApplicationAction">
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iApplication" ref="applicationService"></property>
+		<property name="iQulification" ref="qulificationService"></property>
+		<property name="iItemMargin" ref="itemMarginService"></property>
+		<property name="iItemProxyPrice" ref="itemProxyPriceService"></property>
+		<property name="iCompanyInfo" ref="companyInfoService"></property>
+		<property name="iPayRecordInfo" ref="payRecordInfoService"></property>
+	</bean>
+	
+	<bean name="companyAudit" class="com.useeasy.auction.action.CompanyAuditAction">
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iApplication" ref="applicationService"></property>
+		<property name="iQulification" ref="qulificationService"></property>
+		<property name="iGuestInfo" ref="guestInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+		<property name="iAuctionTeamType" ref="auctionTeamTypeService"></property>
+		<property name="iItemMargin" ref="itemMarginService"></property>
+		<property name="iItemProxyPrice" ref="itemProxyPriceService"></property>
+	</bean>
+	
+	<bean name="guestProxy" class="com.useeasy.auction.action.GuestProxyAction">
+		<property name="iApplication" ref="applicationService"></property>
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iItemProxyPrice" ref="itemProxyPriceService"></property>
+		<property name="iItemInfo" ref="itemInfoService"></property>
+	</bean>
+	
+	<bean name="biddingView" class="com.useeasy.auction.action.BiddingViewAction">
+		<property name="intenetetViewDao" ref="intenetViewImp"/>
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+	</bean>
+	
+	<bean name="guestBidRecord" class="com.useeasy.auction.action.GuestBidRecordAction">
+		<property name="iBidRecordInfo" ref="bidRecordInfoService"></property>
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iItemInfo" ref="itemInfoService"></property>
+		<property name="iApplication" ref="applicationService"></property>
+	</bean>
+	
+	<bean name="guestDealRecord" class="com.useeasy.auction.action.GuestDealRecordAction">
+		<property name="iDealRecordInfo" ref="dealRecordInfoService"></property>
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iApplication" ref="applicationService"></property>
+		<property name="iItemMargin" ref="itemMarginService"></property>
+		<property name="iItemGoods" ref="itemGoodsService"></property>
+		<property name="iCompanyInfo" ref="companyInfoService"></property>
+		<property name="iPayRecordInfo" ref="payRecordInfoService"></property>
+		<property name="iAuctionSettlementInfo" ref="auctionSettlementInfoService"></property>
+		<!--<property name="iItemInfo" ref="itemInfoService"></property>
+		-->
+	</bean>
+	
+	<bean name="guestFinance" class="com.useeasy.auction.action.GuestFinanceAction">
+		<property name="iApplication" ref="applicationService"></property>
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iItemMargin" ref="itemMarginService"></property>
+		<property name="iItemGoods" ref="itemGoodsService"></property>
+	</bean>
+	
+	<bean name="companyFinance" class="com.useeasy.auction.action.CompanyFinanceAction">
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iApplication" ref="applicationService"></property>
+		<property name="iAuctionSettlementInfo" ref="auctionSettlementInfoService"></property>
+		<property name="iDealRecordInfo" ref="dealRecordInfoService"></property>
+		<property name="iItemMargin" ref="itemMarginService"></property>
+		<property name="iItemGoods" ref="itemGoodsService"></property>
+	</bean>
+	
+	<bean name="companyBulletin" class="com.useeasy.auction.action.CompanyBulletinAction">
+		<property name="iBulletinInfo" ref="bulletinInfoService"></property>
+	</bean>
+	
+	<bean name="companyIndex" class="com.useeasy.auction.action.CompanyIndexAction">
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iCompanyInfo" ref="companyInfoService"></property>
+		<property name="iBulletinInfo" ref="bulletinInfoService"></property>
+		<property name="iItemInfo" ref="itemInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+	</bean>
+	
+	<bean name="adminManage" class="com.useeasy.auction.action.AdminManageAction">
+		<property name="iAccountInfo" ref="accountInfoService"></property>
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iCompanyInfo" ref="companyInfoService"></property>
+		<property name="iUploadImgInfo" ref="uploadImgInfoService"></property>
+		<property name="iAuctionGuide" ref="auctionGuideService"></property>
+		 <property name="privilegeDao" ref="SystemPrivilegeDao"></property>
+        <property name="iAdminInfo" ref="adminInfoService"></property>
+		
+	</bean>
+	
+	<bean name="companyPayment" class="com.useeasy.auction.action.CompanyPaymentAction">
+		<property name="iAuctionInfo" ref="auctionInfoService"></property>
+		<property name="iItemMargin" ref="itemMarginService"></property>
+		<property name="iItemGoods" ref="itemGoodsService"></property>
+	</bean>
+	
+	
+	<!--   service  &  dao    -->
+	<bean id="importPersonDAO" class="com.useeasy.auction.dao.impl.ImportPersonHibernateDAO">
+	      <property name="sessionFactory" ref="sessionFactory" />  
+	</bean>
+	<bean id="importPersonService" class="com.useeasy.auction.service.impl.ImportPersonServiceImp">
+	   <property name="dao"  ref="importPersonDAO"/>
+	</bean>
+	
+	<bean id="auctionInfoService" class="com.useeasy.auction.service.impl.AuctionInfoServiceImp">
+		<property name="dao" ref="auctionInfoHibernateDAO" />
+	</bean>
+	<bean id="auctionInfoHibernateDAO" class="com.useeasy.auction.dao.impl.AuctionInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="itemInfoService" class="com.useeasy.auction.service.impl.ItemInfoServiceImp">
+		<property name="dao" ref="itemInfoHibernateDAO" />
+	</bean>
+	<bean id="itemInfoHibernateDAO" class="com.useeasy.auction.dao.impl.ItemInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="accountInfoService" class="com.useeasy.auction.service.impl.AccountInfoServiceImp">
+		<property name="dao" ref="accountInfoHibernateDAO" />
+	</bean>
+	<bean id="accountInfoHibernateDAO" class="com.useeasy.auction.dao.impl.AccountInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="adminInfoService" class="com.useeasy.auction.service.impl.AdminInfoServiceImp">
+		<property name="dao" ref="adminInfoHibernateDAO" />
+	</bean>
+	<bean id="adminInfoHibernateDAO" class="com.useeasy.auction.dao.impl.AdminInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="companyInfoService" class="com.useeasy.auction.service.impl.CompanyInfoServiceImp">
+		<property name="dao" ref="companyInfoHibernateDAO" />
+	</bean>
+	<bean id="companyInfoHibernateDAO" class="com.useeasy.auction.dao.impl.CompanyInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="guestInfoService" class="com.useeasy.auction.service.impl.GuestInfoServiceImp">
+		<property name="dao" ref="guestInfoHibernateDAO" />
+	</bean>
+	<bean id="guestInfoHibernateDAO" class="com.useeasy.auction.dao.impl.GuestInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="uploadImgInfoService" class="com.useeasy.auction.service.impl.UploadImgInfoServiceImp">
+		<property name="dao" ref="uploadImgInfoHibernateDAO" />
+	</bean>
+	<bean id="uploadImgInfoHibernateDAO" class="com.useeasy.auction.dao.impl.UploadImgInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="passRecoverService" class="com.useeasy.auction.service.impl.PassRecoverServiceImp">
+		<property name="dao" ref="passRecoverHibernateDAO" />
+	</bean>
+	<bean id="passRecoverHibernateDAO" class="com.useeasy.auction.dao.impl.PassRecoverHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="auctionTeamTypeService" class="com.useeasy.auction.service.impl.AuctionTeamTypeServiceImp">
+		<property name="dao" ref="auctionTeamTypeHibernateDAO" />
+	</bean>
+	<bean id="auctionTeamTypeHibernateDAO" class="com.useeasy.auction.dao.impl.AuctionTeamTypeHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="itemDetailInfoService" class="com.useeasy.auction.service.impl.ItemDetailInfoServiceImp">
+		<property name="dao" ref="itemDetailInfoHibernateDAO" />
+	</bean>
+	<bean id="itemDetailInfoHibernateDAO" class="com.useeasy.auction.dao.impl.ItemDetailInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="qulificationService" class="com.useeasy.auction.service.impl.QulificationServiceImp">
+		<property name="dao" ref="qulificationHibernateDAO" />
+	</bean>
+	<bean id="qulificationHibernateDAO" class="com.useeasy.auction.dao.impl.QulificationHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="applicationService" class="com.useeasy.auction.service.impl.ApplicationServiceImp">
+		<property name="dao" ref="applicationHibernateDAO" />
+	</bean>
+	<bean id="applicationHibernateDAO" class="com.useeasy.auction.dao.impl.ApplicationHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="itemMarginService" class="com.useeasy.auction.service.impl.ItemMarginServiceImp">
+		<property name="dao" ref="itemMarginHibernateDAO" />
+	</bean>
+	<bean id="itemMarginHibernateDAO" class="com.useeasy.auction.dao.impl.ItemMarginHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="itemProxyPriceService" class="com.useeasy.auction.service.impl.ItemProxyPriceServiceImp">
+		<property name="dao" ref="itemProxyPriceHibernateDAO" />
+	</bean>
+	<bean id="itemProxyPriceHibernateDAO" class="com.useeasy.auction.dao.impl.ItemProxyPriceHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="bidRecordInfoService" class="com.useeasy.auction.service.impl.BidRecordInfoServiceImp">
+		<property name="dao" ref="bidRecordInfoHibernateDAO" />
+	</bean>
+	<bean id="bidRecordInfoHibernateDAO" class="com.useeasy.auction.dao.impl.BidRecordInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="dealRecordInfoService" class="com.useeasy.auction.service.impl.DealRecordInfoServiceImp">
+		<property name="dao" ref="dealRecordInfoHibernateDAO"></property>
+	</bean>
+	<bean id="dealRecordInfoHibernateDAO" class="com.useeasy.auction.dao.impl.DealRecordInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="payRecordInfoService" class="com.useeasy.auction.service.impl.PayRecordInfoServiceImp">
+		<property name="dao" ref="payRecordInfoHibernateDAO"></property>
+	</bean>
+	<bean id="payRecordInfoHibernateDAO" class="com.useeasy.auction.dao.impl.PayRecordInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="itemGoodsService" class="com.useeasy.auction.service.impl.ItemGoodsServiceImp">
+		<property name="dao" ref="itemGoodsHibernateDAO" />
+	</bean>
+	<bean id="itemGoodsHibernateDAO" class="com.useeasy.auction.dao.impl.ItemGoodsHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="auctionSettlementInfoService" class="com.useeasy.auction.service.impl.AuctionSettlementInfoServiceImp">
+		<property name="dao" ref="auctionSettlementInfoHibernateDAO"></property>
+	</bean>
+	<bean id="auctionSettlementInfoHibernateDAO" class="com.useeasy.auction.dao.impl.AuctionSettlementInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="bulletinInfoService" class="com.useeasy.auction.service.impl.BulletinInfoServiceImp">
+		<property name="dao" ref="bulletinInfoHibernateDAO" />
+	</bean>
+	<bean id="bulletinInfoHibernateDAO" class="com.useeasy.auction.dao.impl.BulletinInfoHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="auctionGuideService" class="com.useeasy.auction.service.impl.AuctionGuideServiceImp">
+		<property name="dao" ref="auctionGuideHibernateDAO" />
+	</bean>
+	<bean id="auctionGuideHibernateDAO" class="com.useeasy.auction.dao.impl.AuctionGuideHibernateDAO">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="missDao" class="com.useeasy.auction.dao.impl.MissDayHibernateDAO">
+	  <property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="missday" class="com.useeasy.auction.action.MissDayAction">
+	  
+	   <property name="dao" ref="missDao"/>
+	</bean>
+		 
+	<!--   权限    -->
+    
+	<bean id="SystemPrivilegeDao" class="com.useeasy.auction.dao.impl.SystemPrivilegeImp">
+	      <property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+</beans>

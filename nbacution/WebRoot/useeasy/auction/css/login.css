@@ -1,0 +1,28 @@
+* {padding:0; margin:0;}
+ul{list-style:none;}
+a{color:#645a44; text-decoration:none;}
+a:hover{color:#F00; text-decoration:underline;}
+body{background:url(../images/bg.gif) top repeat-x; font:12px "宋体"; line-height:22px; text-align:center;}
+
+	/* 登陆页面 */
+.container{background:url(../images/bgpic.gif) top no-repeat; width:950px; margin:0 auto;}
+.main{margin:90px auto 30px; width:880px;}
+.left{float:left; background:url(../images/login_img.gif) no-repeat; width:490px; height:410px;}
+.right{float:left; margin:60px 10px 30px 40px; font:14px "宋体"; color:#656661;}
+.right .login{padding-bottom:10px;}
+.right .login li{padding:6px; color:#656661;}
+.right .login li .input{border:1px solid #cbccc7; padding:4px; background:url(../images/input_bg.gif) repeat-x;}
+.right .login li span{padding-left:28px;}
+.right .register{border-top:1px solid #e0e0e0; padding:15px 10px;}
+.right .register .text{float:left; line-height:42px;}
+.right .register .btn{float:left; padding-left:10px;}
+.footer{clear:both; background:url(../images/login_line.gif) repeat-x; color:#7f7f7f; padding:20px;}
+
+
+	/* 报错页面 */
+.content{background:url(../images/bgpic.gif) top no-repeat; width:950px; margin:0 auto; text-align:left; position:relative;}
+.logo{background:url(../images/logo.gif) no-repeat; width:401px; height:72px; margin:15px 0px 10px;}
+.line{background:url(../images/fale_linebg.gif) repeat-x; height:20px;}
+.bg{background:#f6f1db; font:14px "宋体"; color:#626058; text-align:center; padding:120px 200px 150px;}
+.page{background:url(../images/fale_r01.gif) no-repeat; width:90px; height:90px; position:absolute; right:0px; bottom:0px;}
+.back{position:absolute; right:48px; bottom:43px;}

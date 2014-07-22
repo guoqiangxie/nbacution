@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.bean.ItemDetailInfo" table="auction_item_detail_info" catalog="pmh" schema="dbo">
+	 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+        <property name="createTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="create_time" length="7" />
+        </property>
+        <property name="updateTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="update_time" length="7" />
+        </property>
+        <property name="deleteFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="delete_flag" length="50" />
+        </property>
+        
+        
+        <property name="itemId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="item_id" length="50" />
+        </property>
+        <property name="cphm" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="cphm" length="50" />
+        </property>
+        <property name="cjhVIN" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="cjhVIN" length="50" />
+        </property>
+        <property name="syxz" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="syxz" length="50" />
+        </property>
+        <property name="bxlc" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="bxlc" length="50" />
+        </property>
+        <property name="djqyrq" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="djqyrq" length="50" />
+        </property>
+        <property name="pzszsf" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pzszsf" length="50" />
+        </property>
+        <property name="pzszcs" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pzszcs" length="50" />
+        </property>
+        <property name="pzlx" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pzlx" length="50" />
+        </property>
+        <property name="pmsfhpz" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pmsfhpz" length="50" />
+        </property>
+        <property name="njdqny" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="njdqny" length="50" />
+        </property>
+        <property name="bxdqny" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="bxdqny" length="50" />
+        </property>
+        <property name="txfdqny" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="txfdqny" length="50" />
+        </property>
+        <property name="cldjz" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="cldjz" length="50" />
+        </property>
+        <property name="ychgz" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="ychgz" length="50" />
+        </property>
+        <property name="xsz" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="xsz" length="50" />
+        </property>
+        <property name="dk" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="dk" length="50" />
+        </property>
+        <property name="gzsz" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="gzsz" length="50" />
+        </property>
+        <property name="ccs" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="ccs" length="50" />
+        </property>
+        <property name="hbbz" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="hbbz" length="50" />
+        </property>
+        <property name="lb1" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="lb1" length="50" />
+        </property>
+        <property name="zz" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="zz" length="50" />
+        </property>
+        <property name="nd" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="nd" length="50" />
+        </property>
+        <property name="cc" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="cc" length="50" />
+        </property>
+        <property name="sl1" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="sl1" length="50" />
+        </property>
+        <property name="ks" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="ks" length="50" />
+        </property>
+        <property name="lb2" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="lb2" length="50" />
+        </property>
+        <property name="tdsyqly" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="tdsyqly" length="50" />
+        </property>
+        <property name="jzmj" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="jzmj" length="50" />
+        </property>
+        <property name="jtzk" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="jtzk" length="50" />
+        </property>
+        <property name="lb3" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="lb3" length="50" />
+        </property>
+        <property name="dw" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="dw" length="50" />
+        </property>
+        <property name="sl2" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="sl2" length="50" />
+        </property>
+     </class>
+     
+</hibernate-mapping>

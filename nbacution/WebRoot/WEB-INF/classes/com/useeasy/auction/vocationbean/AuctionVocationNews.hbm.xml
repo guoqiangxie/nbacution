@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.vocationbean.AuctionVocationNews" table="auction_vocation_news" catalog="pmh" schema="dbo">
+		 <cache usage="read-write"/>
+		<id name="vnewsid" type="java.lang.Long" unsaved-value="0" >
+			<column name="auction_vnews_id" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+          <property name="vnewsimagepath" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_vnews_imagepath" length="50" />
+        </property>
+        <property name="vnewstitle" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_vnews_title" length="50" />
+        </property>
+        <property name="vnewsperson" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_vnews_person" length="50" />
+        </property>
+   
+         <property name="vnewscontent" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_vnews_content"  />
+        </property>
+        
+         <property name="vnewstype" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_vnews_type"  />
+        </property>
+          <property name="vnewsdate" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="auction_vnews_date"  />
+        </property>
+        
+        
+        
+        <property name="vnewsviewtime" type="java.lang.Long" update="true" insert="true" not-null="false">
+            <column name="auction_vnews_viewtime"  />
+        </property>
+     </class>
+     
+</hibernate-mapping>

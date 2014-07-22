@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.intenetView.bean.IntenetView" table="IntenetView" catalog="pmh" schema="dbo">
+		 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+         <property name="accountName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="accountName" length="100" />
+        </property>
+         <property name="accountPass" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="accountPass" length="100" />
+        </property>
+        
+          <property name="pmh_id" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pmh_id" length="50" />
+        </property>
+         <property name="viewSta" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="viewSta" length="7" />
+        </property>
+        <property name="createTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="create_time" length="7" />
+        </property>
+        <property name="deleteFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="deleteFlag" length="7" />
+        </property>
+      
+     </class>
+     
+</hibernate-mapping>

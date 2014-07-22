@@ -1,0 +1,87 @@
+ 
+
+.header{
+	width:700px; text-align:left; margin:0px auto 10px; padding-top:35px;
+}
+.header .logo{
+	float:left; border:0px; margin-bottom:10px; margin-left:0px;
+}
+.header .help{
+	float:right; border:0px; padding:20px 20px 0px 0px;
+}
+.nav{
+	clear:both;  height:37px;
+}
+.nav .line{
+	border-top:1px solid #000; border-bottom:5px solid #F90; display:block;
+}
+.nav .menu{
+	width:700px; margin:0px auto; height:30px;
+}
+.nav .menu .text{
+	float:left; padding-top:9px;
+}
+.nav .menu .step{
+	float:right;
+}
+.nav .menu .step ul{
+	list-style:none; margin:0px; padding:0px;
+}
+.nav .menu .step li{
+	float:left; text-align:center; font:12px; height:30px; padding:9px 10px 6px 10px;
+}
+.nav .menu .step .bg{
+	background:#F90; color:#FFF; padding:9px 10px 6px 10px;
+}
+
+#container {
+	width:700px; margin:30px auto 20px;
+}
+#container .declare {
+	padding-right:20px; font-size:12px; color:#666; text-align:right;
+}
+legend {
+	padding:0px 5px; margin:0px 0px 0px 12px; color:#b4272d; font:14px "ËÎÌו";
+}
+legend span {
+	font-size:12px; color:#666;
+}
+
+fieldset table {
+	margin:25px auto; width:100%;
+}
+fieldset th {
+	padding:5px 5px; text-align:right; width:120px;
+}
+fieldset td {
+	padding:5px 5px; text-align:left; font:12px Arial, Helvetica, sans-serif;
+}
+fieldset .text {
+	width:220px;
+}
+fieldset .desc {
+	padding:3px; WIDTH:45%; font:12px "ËÎÌו"; COLOR: #666; LINE-HEIGHT: 120%; padding-top:8px;
+}
+label{
+	font:12px Arial, Helvetica, sans-serif; width:130px;
+}
+I {
+	margin:0px 5px; color:red; font:12px Arial, Helvetica, sans-serif;
+}
+.btn{padding:20px;}
+.ok{font:18px "ËÎÌו"; color:#F00; margin:50px;}
+
+
+#footer{clear:both;	text-align:center; color:#4c4c4c; padding-top:10px; line-height:210%; border-top:1px dashed #CCC; width:700px; margin:20px auto 10px;}
+#footer a:link,#footer a:visited{color:#4c4c4c; text-decoration:none;}
+#footer a:hover{color:#cd0202; text-decoration:underline;}
+
+
+ul#stepForm,ul#stepForm li {
+	margin:-30px 0 0;
+	padding: 0;
+}
+
+ul#stepForm li {
+	list-style: none;
+}

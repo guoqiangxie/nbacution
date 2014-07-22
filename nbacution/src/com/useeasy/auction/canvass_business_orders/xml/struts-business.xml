@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+ 
+<!-- json-default -->
+    <package name="businessAction" namespace="/" extends="struts-base" >
+    	
+    	<action name="businessAction_*" class="businessAction" method="{1}">
+    	  <result name="addUI">/WEB-INF/pages/useeasy/auction/canvass_business/add.jsp</result>
+    	  <result name="getList">/WEB-INF/pages/useeasy/auction/canvass_business/getList.jsp</result>
+    	  <result name="update">/WEB-INF/pages/useeasy/auction/canvass_business/update.jsp</result> 
+    	   <result name="get">/WEB-INF/pages/useeasy/auction/canvass_business/get.jsp</result>  
+            <result name="getIndex">/WEB-INF/pages/useeasy/auction/canvass_business/getIndex.jsp</result>  
+             <result name="getIndexList">/WEB-INF/pages/useeasy/auction/canvass_business/getIndexList.jsp</result> 
+    	   
+    	</action>
+      
+    </package>
+	
+</struts>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="calendar" namespace="/" extends="struts-base" >
+    	
+    	<action name="pmtingAction_*" class="pmtingAction"  method="{1}">
+            <result name="addUI">/WEB-INF/pages/useeasy/auction/calendar/pmt/addUI.jsp</result>
+            <result name="getList">/WEB-INF/pages/useeasy/auction/calendar/pmt/getList.jsp</result>
+            <result name="updateUI">/WEB-INF/pages/useeasy/auction/calendar/pmt/updateUI.jsp</result>
+         
+        </action>
+        
+        
+     
+        <action name="pmtsqAction_*" class="pmtsqAction" method="{1}">
+           <result name="getList">/WEB-INF/pages/useeasy/auction/shengqingting/getList.jsp</result>
+           <result name="get">/WEB-INF/pages/useeasy/auction/shengqingting/get.jsp</result>
+           <result name="tomonth">/WEB-INF/pages/useeasy/auction/shengqingting/getList.jsp</result>
+           <result name="companysqGetList">/WEB-INF/pages/useeasy/auction/shengqingting/companysqGetList.jsp</result>   
+           <result name="updateUI">/WEB-INF/pages/useeasy/auction/shengqingting/updateUI.jsp</result>
+           <result name="getOnlyReady">/WEB-INF/pages/useeasy/auction/shengqingting/getOnlyReady.jsp</result> 
+           <result name="teshusq">/WEB-INF/pages/useeasy/auction/shengqingting/teshusq.jsp</result>
+        </action>
+        
+        
+        <action name="utAction_*" class="utAction" method="{1}">
+           <result name="addUI">/WEB-INF/pages/useeasy/auction/calendar/ut/addUI.jsp</result>
+            <result name="getList">/WEB-INF/pages/useeasy/auction/calendar/ut/getList.jsp</result>
+            <result name="updateUI">/WEB-INF/pages/useeasy/auction/calendar/ut/updateUI.jsp</result>
+      
+        </action>
+    </package>
+	
+</struts>

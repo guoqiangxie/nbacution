@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="struts-base" location="42,25" size="280,140">
+    <action name="index" location="65,57" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="sessionDestory.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="sessionDestory.jsp" path="/WEB-INF/pages/useeasy/frame/base/sessionDestory.jsp" location="10,220" size="150,55" />
+  <include file="struts-auction.xml" location="457,10" size="150,30" />
+  <include file="struts-view.xml" location="37,395" size="150,30" />
+  <include file="struts-notice.xml" location="282,395" size="150,30" />
+  <include file="struts-business.xml" location="37,500" size="150,30" />
+  <include file="struts-calendar.xml" location="282,500" size="150,30" />
+  <include file="struts-vocation.xml" location="37,605" size="150,30" />
+</Struts2Diagram>
+

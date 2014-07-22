@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+ 
+   <package name="vocation" namespace="/" extends="struts-base" >
+      <action name="auctionIndexVocationnews_*" class="vocationAction"  method="{1}">
+    	<result name="add">/WEB-INF/pages/useeasy/auction/vocation/vocationlistall.jsp</result>
+    	<result name="index_manger">/WEB-INF/pages/useeasy/auction/vocation/vocationlistall.jsp</result>
+    	<result name="index_addvocation">/WEB-INF/pages/useeasy/auction/vocation/indexVocationNews.jsp</result>
+    	<result name="update_manager">/WEB-INF/pages/useeasy/auction/vocation/lonymessage.jsp</result>
+    	<result name="indexsinglemessage">/WEB-INF/pages/useeasy/auction/vocation/indexlonymessage.jsp</result>
+    	<result name="indexqueryall">/WEB-INF/pages/useeasy/auction/vocation/indexall.jsp</result>
+    	</action>
+	</package>
+</struts>

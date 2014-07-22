@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.bean.PassRecover" table="auction_pass_recover_info" catalog="pmh" schema="dbo">
+		 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+        <property name="createTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="create_time" length="7" />
+        </property>
+       
+        <property name="accountName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_name" length="50" />
+        </property>
+        <property name="accountPassTemp" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_pass_temp" length="50" />
+        </property>
+        <property name="accountPassType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_pass_type" length="50" />
+        </property>
+     </class>
+     
+</hibernate-mapping>

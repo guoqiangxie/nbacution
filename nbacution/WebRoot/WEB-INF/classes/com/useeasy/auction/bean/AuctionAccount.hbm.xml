@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.bean.AuctionAccount" table="auction_account_info" catalog="pmh" schema="dbo">
+	 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+        <property name="createTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="create_time" length="7" />
+        </property>
+        <property name="updateTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="update_time" length="7" />
+        </property>
+        <property name="deleteFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="delete_flag" length="50" />
+        </property>
+        
+        <property name="accountName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_name" length="50" />
+        </property>
+        <property name="accountPass" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_pass" length="50" />
+        </property>
+        <property name="accountStatus" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_status" length="50" />
+        </property>
+        <property name="accountType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_type" length="50" />
+        </property>
+        <property name="accountRelationId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_relation_id" length="50" />
+        </property>
+        <property name="accountRegisterCode" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_register_code" length="50" />
+        </property>
+        <property name="pmManager" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pmManager" length="2" />
+        </property>
+            <set name="privilege" table="privilege_account" lazy="false">
+           <key column="emps"></key>
+           <many-to-many class="com.useeasy.auction.bean.SystemPrivilege" column="privilege"></many-to-many>
+        </set>
+     </class>
+     
+</hibernate-mapping>

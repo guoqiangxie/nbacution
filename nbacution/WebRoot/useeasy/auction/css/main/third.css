@@ -1,0 +1,56 @@
+.sale .blank{width:50px; height:20px; overflow:hidden;}
+.sale{width:950px; color:#333; overflow:auto;}
+.sale .path{padding:6px 12px 10px;}
+.sale .caption{text-align:center; border-bottom:1px dashed #d9d9d9; margin-bottom:8px; height:55px;}
+.sale .caption .name{float:left; width:680px;}
+.sale .caption .name h1{font:18px "simhei"; padding-bottom:6px;}
+.sale .caption .name .time{font:12px "宋体"; color:#999;}
+.sale .caption .name .time span{font:bold 12px "宋体"; color:#ff6600; padding-right:8px;}
+.sale .caption .btn{float:right; width:236px;}
+.sale .caption .btn li{float:left; padding:2px;}
+
+
+
+.mainnav{font:bold 14px/28px "宋体"; padding-left:50px; height:28px; _height:27px; height:23px\0; position:relative;}
+.mainnav li{float:left; margin-left:1px;}
+.mainnav li.line{border-bottom:1px solid #df7c00;}
+.mainnav li a{float:left; background:url(../../images/main/menu_lbg.gif) left top no-repeat;} 
+.mainnav li a span{float:left; cursor:hand; color:#575757; background:url(../../images/main/menu_rbg.gif) right top no-repeat; padding:0px 14px; height:28px;} 
+.mainnav li a:hover span {padding:0px 14px; color:#FFF; text-decoration:none; height:28px;} 
+.mainnav .out a:visited{background-position:0px -28px; text-decoration:none;} 
+.mainnav .out a:visited span{background-position:right -28px; padding:0px 14px; color:#FFF; text-decoration:none;} 
+.mainnav .over a:hover{background-position:0px -28px; text-decoration:none;} 
+.mainnav .over a:hover span{background-position:right -28px; text-decoration:none;} 
+.mainnav .topbtn{position:absolute; top:3px; right:0px;}
+
+
+
+ 
+.sale .info{clear:both;}
+.sale .info span{font:14px "宋体"; color:#ff6600;}
+.sale .info .left{float:left; width:250px;}
+.sale .info .left .wrap_border{border:1px solid #999; padding:7px;}
+.sale .info .right{width:680px; float:right;}
+.sale .info .right .list li p{float:left; font-size:14px; color:#222; font-family:arial,SimSun; border-bottom:1px dashed #d9d9d9; padding:4px 0 3px;}
+.sale .info .right .list li p .price{color:#F60; color:#F60; font-family:verdana; font-size:18px; margin-right:3px;}
+.sale .info .right .list .item1{width:420px;}
+.sale .info .right .list .item2{width:260px;}
+.sale .info .right .btn li{float:left; font:bold 14px "宋体"; text-align:center; margin-top:16px;}
+.sale .info .right .btn li a{display:block; background:url(../../images/third_btnout01.gif) no-repeat; height:34px; width:136px; color:#FFF; text-decoration:none; padding:9px 0 0 7px;}
+.sale .info .right .btn li a:hover{background:url(../../images/third_btnover01.gif) no-repeat;}
+.sale .info .right .btn li span a{background:url(../../images/third_btnout02.gif) no-repeat; height:34px; width:150px; color:#990000; margin-left:36px; padding-left:9px;}
+.sale .info .right .btn li span a:hover{background:url(../../images/third_btnover02.gif) no-repeat;}
+
+.sale .into{clear:both;}
+.sale .into .left{float:left; width:250px;}
+.sale .into .left .title{background:url(../../images/third_titbg.gif) top no-repeat; height:28px;}
+.sale .into .left .title .text{float:left; font:bold 14px "宋体"; color:#333; padding:6px 0 0 8px;}
+.sale .into .left .title .more{float:right; padding:3px 6px; color:#444; text-decoration:none;}
+.sale .into .left .list{border-left:1px solid #f1c3ac; border-right:1px solid #f1c3ac; border-bottom:1px solid #f1c3ac; padding:3px 8px 7px; color:#4c4c4c;}
+.sale .into .left .list li{border-bottom:1px dashed #999; padding:5px 0px; height:18px;}
+.sale .into .left .list li.last{border-bottom:none;}
+.sale .into .left .list img{padding-right:5px;}
+
+.sale .into .right{float:right; font:14px "宋体"; color:#414141; line-height:27px; width:680px;}
+.sale .into .right .cont{padding:10px; width:660px;}
+.sale .into .right .note{color:#d54100; border:1px solid #ffe2b8; background:#fff5e3; padding:2px 12px 0px;}

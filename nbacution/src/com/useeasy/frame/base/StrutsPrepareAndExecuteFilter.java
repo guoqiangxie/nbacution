@@ -1,0 +1,98 @@
+package com.useeasy.frame.base;
+
+import org.apache.struts2.StrutsStatics;
+import org.apache.struts2.dispatcher.Dispatcher;
+import org.apache.struts2.dispatcher.mapper.ActionMapping;
+import org.apache.struts2.dispatcher.ng.ExecuteOperations;
+import org.apache.struts2.dispatcher.ng.InitOperations;
+import org.apache.struts2.dispatcher.ng.PrepareOperations;
+import org.apache.struts2.dispatcher.ng.filter.FilterHostConfig;
+
+import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+import java.util.regex.Pattern;
+
+/**
+ * Handles both the preparation and execution phases of the Struts dispatching process.  This filter is better to use
+ * when you don't have another filter that needs access to action context information, such as Sitemesh.
+ */
+public class StrutsPrepareAndExecuteFilter implements StrutsStatics, Filter {
+    protected PrepareOperations prepare;
+    protected ExecuteOperations execute;
+	protected List<Pattern> excludedPatterns = null;
+
+    public void init(FilterConfig filterConfig) throws ServletException {
+    	
+    	AppContext.getInstance();  //...
+        InitOperations init = new InitOperations();
+        try {
+            FilterHostConfig config = new FilterHostConfig(filterConfig);
+            init.initLogging(config);
+            Dispatcher dispatcher = init.initDispatcher(config);
+            init.initStaticContentLoader(config, dispatcher);
+
+            prepare = new PrepareOperations(filterConfig.getServletContext(), dispatcher);
+            execute = new ExecuteOperations(filterConfig.getServletContext(), dispatcher);
+			this.excludedPatterns = init.buildExcludedPatternsList(dispatcher);
+
+            postInit(dispatcher, filterConfig);
+        } finally {
+            init.cleanup();
+        }
+
+    }
+
+    /**
+     * Callback for post initialization
+     */
+    protected void postInit(Dispatcher dispatcher, FilterConfig filterConfig) {
+    }
+
+    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+
+        HttpServletRequest request = (HttpServletRequest) req;
+        HttpServletResponse response = (HttpServletResponse) res;
+     
+        String uri =  request.getRequestURI();
+        String mothed = request.getMethod();
+        String uri_val = uri.substring(uri.lastIndexOf("/")+1, uri.length());
+        if(("uploadImage.do".equalsIgnoreCase(uri_val)
+        		|| ("uploadExcel.do").equalsIgnoreCase(uri_val)
+        		|| ("uploadBatchImageAll.do").equalsIgnoreCase(uri_val)
+        		|| ("uploadBatchImage.do").equalsIgnoreCase(uri_val) 
+        		|| ("simpleuploader.do").equalsIgnoreCase(uri_val) )
+    		   && "post".equalsIgnoreCase(mothed)){
+    	   chain.doFilter(request, response);
+        }else{
+        	try {
+                prepare.setEncodingAndLocale(request, response);
+                prepare.createActionContext(request, response);
+                prepare.assignDispatcherToThread();
+    			if ( excludedPatterns != null && prepare.isUrlExcluded(request, excludedPatterns)) {
+    				chain.doFilter(request, response);
+    			} else {
+    				request = prepare.wrapRequest(request);
+    				ActionMapping mapping = prepare.findActionMapping(request, response, true);
+    				if (mapping == null) {
+    					boolean handled = execute.executeStaticResourceRequest(request, response);
+    					if (!handled) {
+    						chain.doFilter(request, response);
+    					}
+    				} else {
+    					execute.executeAction(request, response, mapping);
+    				}
+    			}
+            } finally {
+                prepare.cleanupRequest(request);
+            }
+        }
+        
+    }
+
+    public void destroy() {
+        prepare.cleanupDispatcher();
+    }
+}

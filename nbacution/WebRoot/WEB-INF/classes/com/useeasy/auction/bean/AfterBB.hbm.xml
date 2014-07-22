@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.bean.AfterBB" table="After_info" catalog="pmh" schema="dbo">
+		<id name="id" type="java.lang.Integer" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+          <property name="pmh_id" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pmh_id" length="50" />
+        </property>
+        <property name="pmhName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pmhName" length="50" />
+        </property>
+        <property name="createTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="create_time" length="7" />
+        </property>
+        <property name="pmhTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="pmhTime" length="7" />
+        </property>
+         <property name="cheJiao" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="cheJiao" length="7" />
+        </property>
+         <property name="chenJiaoE" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="chenJiaoE" length="7" />
+        </property>
+         <property name="jinMaiRen" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="jinMaiRen" length="7" />
+        </property>
+         <property name="liuPai" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="liuPai" length="7" />
+        </property>
+         <property name="chePai" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="chePai" length="7" />
+        </property>
+         <property name="xianChangQk" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="xianChangQk" length="500" />
+        </property>
+         <property name="taRenWeiTuo" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="taRenWeiTuo" length="7" />
+        </property>
+         <property name="pubGongHangTel" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pubGongHangTel" length="11" />
+        </property>
+          <property name="jingJiaChenXun" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="jingJiaChenXun" length="11" />
+        </property>
+          <property name="weiTuoJinMai" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="weiTuoJinMai" length="11" />
+        </property>
+          <property name="diJiaXieLou" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="diJiaXieLou" length="11" />
+        </property>
+        <property name="shiXiaDingJia" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="shiXiaDingJia" length="11" />
+        </property>
+          <property name="yaJia" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="yaJia" length="11" />
+        </property>
+          <property name="qiHangBaShi" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="qiHangBaShi" length="11" />
+        </property>
+          <property name="touShu" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="touShu" length="11" />
+        </property>
+          <property name="other" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="other" length="11" />
+        </property>
+     </class>
+     
+</hibernate-mapping>

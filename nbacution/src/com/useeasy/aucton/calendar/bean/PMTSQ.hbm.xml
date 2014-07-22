@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    
+   
+	<class name="com.useeasy.aucton.calendar.bean.PMTSQ" table="PMTSQ"
+		catalog="pmh" schema="dbo">
+		 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Integer" unsaved-value="0">
+			<column name="id" precision="22" scale="0" />
+			<generator class="identity">
+			</generator>
+		</id>
+		<property name="useDay" type="java.util.Date"></property>
+		<property name="pmType" type="java.lang.String" length="50"></property>
+	   <property name="pmhName" type="java.lang.String" length="200"></property>
+		<property name="pmCompany" type="java.lang.String" length="100"></property>
+		<property name="pmTime" type="java.util.Date"></property>
+		<property name="pmAddress" type="java.lang.String"></property>
+		 <property name="person" type="java.lang.String" length="10"></property>
+		<property name="tel" type="java.lang.String" length="15"></property>
+		 <property name="phone" type="java.lang.String" length="11"></property>
+		<property name="newsPaper" type="java.lang.String" length="50"></property>
+	    <property name="paperTime" type="java.util.Date"></property>
+	    <property name="pmhId" type="java.lang.Long"></property>
+		<property name="gongGaoId" type="java.lang.Long"></property>
+		<property name="pmt" type="java.lang.Integer"></property>
+	    <property name="ut" type="java.lang.Integer"></property>
+	    <property name="internetMain" type="java.lang.String" length="200"></property>
+		 <property name="u_id" type="java.lang.Long"></property>
+		 <property name="stu" type="java.lang.String" length="5"></property>
+		 <property name="creatTime" type="java.util.Date"></property>
+		 <property name="delete" type="java.lang.String">
+		     <column name="delete_flag" length="5"></column>
+		 </property>
+		  <property name="note" type="java.lang.String">
+		     
+		 </property>
+		 <property name="utName" formula="(select o.useTime from pmh.dbo.UserTime o where o.id = ut)" />
+		 <property name="pmtName" formula="(select o.pmtName   from pmh.dbo.PMTing o where o.id = pmt)" />  
+		  <property name="gongGaoTitle" formula="(select o.title from pmh.dbo.AuctionNotice o where o.id = gongGaoId)" />
+     
+	</class>
+
+</hibernate-mapping>

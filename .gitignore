@@ -1,0 +1,16 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.iml
+.idea/
+.svn/
+target/
+
+
+
+# 忽略dbg文件和dbg目录
+
+attached

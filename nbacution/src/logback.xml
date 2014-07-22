@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<configuration> 
+
+	<!--<timestamp key="bySecond" datePattern="yyyyMMdd'-'HHmmss"/>
+  	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender"> 
+ 		<file>f:\temps\${bySecond}.log </file>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"> 
+      	 daily rollover  
+      	<fileNamePattern>logFile_%d{yyyy-MM-dd}.log</fileNamePattern> 
+ 		 keep 30 days' worth of history  
+      	<maxHistory>30</maxHistory> 
+    	</rollingPolicy> 
+    	<encoder> 
+      		<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} %method  %ex - %msg%n</pattern> 
+    	</encoder> 
+  	</appender>-->  
+  	
+  	<appender name="SYS_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender"> 
+    	<file>e:\log_auction\auction.txt</file> 
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"> 
+      		<!-- rollover daily --> 
+      		<maxHistory>30</maxHistory>
+      		<fileNamePattern>e:\log_auction\auction-%d{yyyy-MM-dd}_%i.txt</fileNamePattern> 
+      		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP"> 
+        	<!-- or whenever the file size reaches 100MB --> 
+        		<maxFileSize>50MB</maxFileSize> 
+      		</timeBasedFileNamingAndTriggeringPolicy> 
+    	</rollingPolicy> 
+    	<encoder> 
+      		<pattern>%d{yyyy-MM-dd/HH:mm:ss.SSS} [%thread] %-5level %logger{10} %method %ex - %msg%n</pattern> 
+    	</encoder> 
+  	</appender>
+  	
+ 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"> 
+  		<encoder> 
+      		<pattern>%d{yyyy-MM-dd/HH:mm:ss.SSS} [%thread] %-5level %logger{10} %method %ex - %msg%n</pattern> 
+    	</encoder> 
+  	</appender> 
+  	
+  	<logger name="com.useeasy" level="INFO">
+  		<appender-ref ref="SYS_FILE" />
+  	</logger>
+  	
+  	<!--<root level="NULL"> 
+    	<appender-ref ref="STDOUT" /> 
+  	</root>--> 
+  	
+</configuration>

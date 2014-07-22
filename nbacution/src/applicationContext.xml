@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:aop="http://www.springframework.org/schema/aop"
+     xmlns:tx="http://www.springframework.org/schema/tx"
+     xsi:schemaLocation="
+     http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+     http://www.springframework.org/schema/aop 
+     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<bean id="propertyConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+		<property name="locations">
+			<list>
+				<value>classpath:hibernate.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- c3p0 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass">
+			<value>${hibernate.connection.driver_class}</value>
+		</property>
+		<property name="jdbcUrl">
+			<value>${hibernate.connection.url}</value>
+		</property>
+		<property name="user">
+			<value>${hibernate.connection.username}</value>
+		</property>
+		<property name="password">
+			<value>${hibernate.connection.password}</value>
+		</property>
+		<property name="minPoolSize">
+			<value>${hibernate.c3p0.min_size}</value>
+		</property>
+		<property name="maxPoolSize">
+			<value>${hibernate.c3p0.max_size}</value>
+		</property>
+		<property name="initialPoolSize">
+			<value>${hibernate.c3p0.initial_pool_size}</value>
+		</property>
+		<property name="maxIdleTime">
+			<value>${hibernate.c3p0.max_idle_time}</value>
+		</property>
+		<property name="acquireIncrement">
+			<value>${hibernate.c3p0.acquire_increment}</value>
+		</property>
+		<property name="idleConnectionTestPeriod">
+			<value>${hibernate.c3p0.idle_test_period}</value>
+		</property>
+		<property name="acquireRetryAttempts">
+			<value>${hibernate.c3p0.acquire_retry_attempts}</value>
+		</property>
+		<property name="maxStatements">
+			<value>${hibernate.c3p0.max_statements}</value>
+		</property>
+			
+			 
+		 
+	</bean>
+	  
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
+				<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+				<!-- //启用二级缓存    -->
+               <prop key="hibernate.cache.use_second_level_cache">true</prop>   
+             <!-- //ehcache的配置文件    -->
+              <prop key="hibernate.cache.configurationResourceName">ehcache.xml</prop>   
+             <!--  //启用查询缓存    -->
+               <prop key="hibernate.cache.use_query_cache">false</prop>   
+             <!-- //指定hibernate缓存实现为 ehcache    -->
+               <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>      
+				 
+			</props>
+		</property>
+		<property name="mappingLocations">
+			<list>
+				<value>classpath:com/useeasy/auction/bean/*.hbm.xml</value>
+				<value>classpath:com/useeasy/auction/dto/*.hbm.xml</value>
+				<value>classpath:com/useeasy/auction/intenetView/bean/*.hbm.xml</value>
+				<value>classpath:com/useeasy/auction/notice/bean/*.hbm.xml</value>
+				<value>classpath:com/useeasy/aucton/calendar/bean/*.hbm.xml</value>
+				<value>classpath:com/useeasy/auction/canvass_business_orders/bean/*.hbm.xml</value>
+				<value>classpath:com/useeasy/auction/vocationbean/*.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!--<import resource="classpath:com\useeasy\frame\applicationContext-frame.xml" />-->
+	<import resource="classpath:com\useeasy\auction\intenetView\xml\applicationContext-view.xml" />
+	<import resource="classpath:com\useeasy\auction\applicationContext-auction.xml" />
+  	<import resource="classpath:com\useeasy\auction\notice\xml\applicationContext-notice.xml" />
+	<import resource="classpath:com\useeasy\auction\canvass_business_orders\xml\applicationContext-business.xml" />
+	<import resource="classpath:com\useeasy\aucton\calendar\xml\applicationContext-calendar.xml"/>
+	<import resource="classpath:com\useeasy\auction\vocation\xml\applicationContext-vocation.xml"/>
+	<import resource="classpath:com\useeasy\auction\pmhinfo\xml\applicationContext-pmhinfomessage.xml"/>
+	<!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>${hibernate.connection.driver_class}</value>
+		</property>
+		<property name="url">
+			<value>${hibernate.connection.url}</value>
+		</property>
+		<property name="username">
+			<value>${hibernate.connection.username}</value>
+		</property>
+		<property name="password">
+			<value>${hibernate.connection.password}</value>
+		</property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.jdbc.fetch_size">${hibernate.jdbc.fetch_size}</prop>
+				<prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+			</props>
+		</property>
+		<property name="mappingLocations">
+			<list>
+				<value>classpath:com/socket/frame/bean/*.hbm.xml</value>
+			</list>
+		</property>
+	</bean>-->
+	
+	
+	
+	<!--
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+	<tx:advice id="txPlatAdvice" transaction-manager="txManager">
+		<tx:attributes>
+		    <tx:method name="get*" read-only="true"/>
+		    <tx:method name="*"/>
+	  	</tx:attributes>
+  	</tx:advice>
+	<aop:config>
+		<aop:pointcut id="txPlatService" 
+			expression="execution(* com.sys.frame.service..*.*(..))"/>
+		<aop:advisor advice-ref="txPlatAdvice" 
+			pointcut-ref="txPlatService"/>
+	</aop:config>
+	--><!--
+  	
+  	<bean id="authorityInterceptor" class="com.sys.base.AuthorityInterceptor"/>
+  	<aop:config>
+  		<aop:pointcut id="authorityService" 
+  			expression="execution(* com.sys.frame.web.action.LoginAction.excute(..))" />
+  		<aop:aspect id="authorityAspect" ref="authorityInterceptor">
+  			<aop:around method="checkAuthority" pointcut-ref="authorityService"/>
+  		</aop:aspect>
+  	</aop:config>
+  	
+  	-->
+  	
+</beans>

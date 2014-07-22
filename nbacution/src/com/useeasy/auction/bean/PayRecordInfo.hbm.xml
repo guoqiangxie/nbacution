@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.useeasy.auction.bean.PayRecordInfo" table="auction_pay_info"  catalog="pmh" schema="dbo">
+		 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+        <property name="createTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="create_time" length="7" />
+        </property>
+        <property name="updateTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="update_time" length="7" />
+        </property>
+        <property name="deleteFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="delete_flag" length="50" />
+        </property>
+        
+        <property name="accountId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_id" length="50" />
+        </property>
+        <property name="auctionId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_id" length="50" />
+        </property>
+        <property name="companyId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="company_id" length="50" />
+        </property>
+        <property name="orderId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="order_id" length="100" />
+        </property>
+        <property name="orderTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="order_time" length="7" />
+        </property>
+        <property name="payMoney" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pay_money" length="50" />
+        </property>
+        <property name="payStatus" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pay_status" length="50" />
+        </property>
+        <property name="payType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pay_type" length="50" />
+        </property>
+        <property name="merchantId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="merchant_id" length="100" />
+        </property>
+        
+	</class>
+</hibernate-mapping>

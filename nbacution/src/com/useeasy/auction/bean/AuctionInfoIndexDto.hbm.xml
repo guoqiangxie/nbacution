@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.useeasy.auction.bean.AuctionInfoIndexDto" table="auction_pmh_info" catalog="pmh" schema="dbo">
+	 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+        <property name="deleteFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="delete_flag" length="50" />
+        </property>
+        
+        <property name="companyId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_company_id" length="50" />
+        </property>
+        <property name="companyName"  formula="(select company.company_name from pmh.dbo.auction_company_info company where company.id_num = auction_company_id)" />
+        <property name="companyInterfaceFlag"  formula="(select company.interface_flag from pmh.dbo.auction_company_info company where company.id_num = auction_company_id)" />
+        
+        <property name="auctionForm" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_form" length="50" />
+        </property>
+        <property name="auctionDelegation" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_delegation" length="50" />
+        </property>
+        <property name="auctionNature" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_nature" length="50" />
+        </property>
+        <property name="auctionType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_type" length="50" />
+        </property>
+        
+        <property name="auctionName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_name" length="200" />
+        </property>
+        <property name="auctionStartTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="auction_start_time" length="7" />
+        </property>
+        <property name="auctionAddress" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_address" length="200" />
+        </property>
+        <property name="auctionLinkTel" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_link_tel" length="50" />
+        </property>
+        <property name="auctionStatus" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_status" length="50" />
+        </property>
+        
+        <property name="auctionPicType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_pic_type" length="50" />
+        </property>
+        <property name="auctionPicVal" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_pic_val" length="50" />
+        </property>
+        <property name="uploadUrl"  formula="( select img.upload_url from pmh.dbo.auction_upload_img_info img where img.relation_id = auction_company_id and img.upload_type = 1)" />
+        <property name="uploadAucUrl"  formula="( select img.upload_url from pmh.dbo.auction_upload_img_info img where img.relation_id = id_num and img.upload_type = 2)" />
+        
+        <property name="publishFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="publish_flag" length="50" />
+        </property>
+        
+		<property name="xmlFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="xml_flag" length="50" />
+        </property>
+        <property name="sortFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="sort_flag" length="50" />
+        </property>
+        <property name="auctionWebPay" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_web_pay" length="50" />
+        </property>
+        
+        <property name="loginUrl" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="login_url" length="200" />
+        </property>
+        <property name="visitUrl" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="visit_url" length="200" />
+        </property>
+	</class>
+</hibernate-mapping>

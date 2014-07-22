@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.bean.ItemInfo" table="auction_item_info" catalog="pmh" schema="dbo">
+		 <cache usage="read-write"/>
+		 <id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+        <property name="createTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="create_time" length="7" />
+        </property>
+        <property name="updateTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="update_time" length="7" />
+        </property>
+        <property name="deleteFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="delete_flag" length="50" />
+        </property>
+        
+        
+        <property name="companyId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="c_id" length="50" />
+        </property>
+        <property name="auctionId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pub_id" length="50" />
+        </property>
+        <property name="itemName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_cname" length="2000" />
+        </property>
+        <property name="itemNumber" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_number" length="50" />
+        </property>
+        <property name="viewOrder" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="view_order" length="50" />
+        </property>
+        <property name="valuationMethod" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_fashion" length="50" />
+        </property>
+        <property name="countNumber" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_amount" length="50" />
+        </property>
+        <property name="countUnit" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_unit" length="50" />
+        </property>
+        <property name="countContent" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="qt_content" length="50" />
+        </property>
+        <property name="itemCommissionType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_commission_type" length="50" />
+        </property>
+        <property name="itemCommissionValue" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_commission" length="50" />
+        </property>
+        <property name="margin" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_margin" length="50" />
+        </property>
+        <property name="marginFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="margin_control" length="50" />
+        </property>
+        <property name="itemBasePrice" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_basePrice" length="50" />
+        </property>
+        <property name="itemPrice" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_start_price" length="500" />
+        </property>
+        <property name="itemReferencePriceFir" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_reference_1" length="50" />
+        </property>
+        <property name="itemReferencePriceSec" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_reference_2" length="50" />
+        </property>
+        <property name="teamId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="team_id" length="50" />
+        </property>
+        <property name="recommendFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="recommend_type" length="50" />
+        </property>
+        <property name="proxyPriceFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="proxy_price_type" length="50" />
+        </property>
+        <property name="publishFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_publish" length="50" />
+        </property>
+        <property name="itemDescription" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_discribe" length="5000" />
+        </property>
+        <property name="itemType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="type_id" length="50" />
+        </property>
+        <property name="itemStatus" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_state" length="50" />
+        </property>
+        <property name="itemCurrentPrice" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_current_rate" length="500" />
+        </property>
+        <property name="itemPriceRange" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="item_price_range" length="50" />
+        </property>
+        
+        <property name="itemPriceRangeType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="item_price_range_type" length="50" />
+        </property>
+        <property name="itemPriceRangeMode" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="item_price_range_mode" length="50" />
+        </property>
+        <property name="currentFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="current_flag" length="50" />
+        </property>
+        <property name="pauseFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pause_flag" length="50" />
+        </property>
+        <property name="oldStatusFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="old_status_flag" length="50" />
+        </property>
+        <property name="countTimeFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="count_time_flag" length="50" />
+        </property>
+        <property name="priceUserId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="price_user_id" length="50" />
+        </property>
+        <property name="priceUserType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="price_user_type" length="50" />
+        </property>
+        <property name="priceBidNum" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="price_bid_num" length="50" />
+        </property>
+        <property name="proxyType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="proxy_type" length="50" />
+        </property>
+        <property name="proxyMaxValue" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="proxy_max_value" length="50" />
+        </property>
+        <property name="proxySecValue" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="proxy_sec_value" length="50" />
+        </property>
+        <property name="proxyUserId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="proxy_user_id" length="50" />
+        </property>
+        <property name="proxyBidNum" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="proxy_bid_num" length="50" />
+        </property>
+        <property name="commissionValue" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="commission_value" length="50" />
+        </property>
+        <property name="countValue" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="count_value" length="50" />
+        </property>
+        
+       <property name="auctionDeleteFlag"
+			formula="(select pmh.delete_flag from pmh.dbo.auction_pmh_info pmh where pmh.id_num = pub_id)" />
+		<property name="imgUrl"
+			formula="(select top 1 u.upload_url from pmh.dbo.auction_upload_img_info u where u.relation_id = id_num)" />
+		<property name="auctionName"
+			formula="(select pmh.auction_name from pmh.dbo.auction_pmh_info pmh where pmh.id_num = pub_id)" />
+		<property name="auctionStartTime"
+			formula="(select pmh.auction_start_time from pmh.dbo.auction_pmh_info pmh where pmh.id_num = pub_id)" />
+			<property name="auctionStatus"
+			formula="(select pmh.auction_status from pmh.dbo.auction_pmh_info pmh where pmh.id_num = pub_id)" />
+
+     </class>
+     
+</hibernate-mapping>

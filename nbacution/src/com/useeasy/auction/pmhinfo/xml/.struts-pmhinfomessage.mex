@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="pmhinfo_index" location="0,0" size="0,0">
+    <action name="auctionIndexManager_*" location="0,0" size="0,0">
+      <result name="query_all">
+        <resourceEdge source="query_all" routing="0" target="message_all.jsp" />
+      </result>
+      <result name="query_id">
+        <resourceEdge source="query_id" routing="0" target="message_single.jsp" />
+      </result>
+      <result name="querytype">
+        <resourceEdge source="querytype" routing="0" target="message_type.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="message_all.jsp" path="/WEB-INF/pages/useeasy/auction/message/message_all.jsp" location="0,0" size="0,0" />
+  <webResource name="message_single.jsp" path="/WEB-INF/pages/useeasy/auction/message/message_single.jsp" location="0,0" size="0,0" />
+  <webResource name="message_type.jsp" path="/WEB-INF/pages/useeasy/auction/message/message_type.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

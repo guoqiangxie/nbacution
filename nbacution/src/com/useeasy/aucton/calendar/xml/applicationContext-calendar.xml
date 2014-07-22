@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="
+     http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+     
+    <!-- action -->
+	<bean name="pmtingAction" class="com.useeasy.aucton.calendar.action.PMTingAction" scope="prototype">
+	     <property name="dao" ref="pmtingdao"/>
+	   <!--    <property name="pmtsqdao" ref="pmtsqdao"/>-->
+	     <property name="udo" ref="utdao"/>
+	</bean>
+	
+ 
+ 
+  <bean name="pmtsqAction" class="com.useeasy.aucton.calendar.action.PMTSQAction" scope="prototype">
+	      <property name="ptdao" ref="pmtingdao"/>
+	      <property name="sqdao" ref="pmtsqdao"/>
+	      <property name="utdao" ref="utdao"/>
+	</bean>
+	
+	<bean name="utAction" class="com.useeasy.aucton.calendar.action.UserTimeAction" scope="prototype">
+	      <property name="utdao" ref="utdao"/>
+	</bean>
+	
+	
+	<!--   service  &  dao    -->
+	<bean id="pmtingdao" class="com.useeasy.aucton.calendar.imp.PMTingImp">
+	      <property name="sessionFactory" ref="sessionFactory" />  
+	</bean>
+	
+	<bean id="pmtsqdao" class="com.useeasy.aucton.calendar.imp.PMTSQImp">
+	      <property name="sessionFactory" ref="sessionFactory" />  
+	</bean>
+	<!-- 拍卖厅时间段如10:00,13:00,15:00 -->
+	<bean id="utdao" class="com.useeasy.aucton.calendar.imp.UserTingImp">
+	      <property name="sessionFactory" ref="sessionFactory" />  
+	</bean>
+	 
+	
+</beans>

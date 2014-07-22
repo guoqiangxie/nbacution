@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.useeasy.aucton.calendar.bean.UserTime" table="UserTime"
+		catalog="pmh" schema="dbo">
+		 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Integer" unsaved-value="0">
+			<column name="id" precision="22" scale="0" />
+			<generator class="identity">
+			</generator>
+		</id>
+		<property name="useTime" type="java.lang.String" update="true"
+			insert="true" not-null="false">
+			<column name="useTime" length="50" />
+		</property>
+		 
+		<property name="notice" type="java.lang.String" update="true"
+			insert="true" not-null="false">
+			<column name="notice" length="50" />
+		</property>
+		<!-- save-update -->
+		 <set name="pmt" table="pmt_usetimg" lazy="false" inverse="true" cascade="all" >
+		    <key column="ut"></key>
+		    <many-to-many class="com.useeasy.aucton.calendar.bean.PMTing" column="pmt"></many-to-many>
+		 </set>
+	</class>
+
+</hibernate-mapping>

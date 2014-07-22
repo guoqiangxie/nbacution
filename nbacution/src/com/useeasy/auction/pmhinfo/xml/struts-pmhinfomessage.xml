@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+     <package name="pmhinfo_index" namespace="/" extends="struts-base">
+     
+         <action name="auctionIndexManager_*"  class="indexmanager"  method="{1}">
+    	    <result name="query_all">/WEB-INF/pages/useeasy/auction/message/message_all.jsp</result>
+    	     <result name="query_id" >/WEB-INF/pages/useeasy/auction/message/message_single.jsp</result>
+    	    <result name="querytype" >/WEB-INF/pages/useeasy/auction/message/message_type.jsp</result>
+    	      <result name="query_show" >/WEB-INF/pages/useeasy/auction/message/index_single.jsp</result>
+    	
+    	</action>
+     
+     </package>
+      
+</struts>

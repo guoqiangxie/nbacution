@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="auction" namespace="/" extends="struts-base">
+    	
+    	<action name="auctionIndex_*" class="auctionIndex" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/index.jsp</result>
+        	<result name="house" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/house.jsp</result>
+        	<result name="mobile" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/mobile.jsp</result>
+        	<result name="material" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/material.jsp</result>
+        	<result name="stock" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/stock.jsp</result>
+        	<result name="mlpllz" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/mlpllz.jsp</result>
+        	<result name="art" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/art.jsp</result>
+        	<result name="other" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/other.jsp</result>
+        	<result name="special" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/special.jsp</result>
+        	<result name="interation" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/interation.jsp</result>
+        	<result name="judicial" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/judicial.jsp</result>
+        	<result name="society" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/society.jsp</result>
+        	<result name="reference" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/reference.jsp</result>
+        	<result name="auctionDetail" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/auctionDetail.jsp</result>
+        	<result name="auctionDetailAll" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/auctionDetailAll.jsp</result>
+        	<result name="itemDetail" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/itemDetail.jsp</result>
+        	<result name="auctionSearch" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/auctionSearch.jsp</result>
+        	<result name="itemSearch" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/itemSearch.jsp</result>
+        	<result name="about" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/about.jsp</result>
+        	<result name="map" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/map.jsp</result>
+        	<result name="guide" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/guide.jsp</result>
+        	<result name="guideDetail" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/guideDetail.jsp</result>
+        	<result name="imageDetail" type="dispatcher">/WEB-INF/pages/useeasy/auction/index/imageDetail.jsp</result>
+        	<result name="linkmore">/WEB-INF/pages/useeasy/auction/main/linkmore.jsp</result>
+        </action>
+        
+        
+        
+        
+        
+        
+        
+        <action name="validationCode_*" class="validationCode" method="{1}">
+        	<result type="stream">   
+               <param name="contentType">image/jpeg</param>   
+               <param name="inputName">inputStream</param>   
+        	</result>
+        </action>
+        
+        <action name="uploadManage_*" class="uploadManage" method="{1}">
+        	<result name="imgUpload" type="dispatcher">/WEB-INF/pages/useeasy/auction/upload/imgUpload.jsp</result>
+        </action>
+        
+        <action name="auctionLogin_*" class="auctionLogin" method="{1}">
+        	<result name="logined" type="dispatcher">/WEB-INF/pages/useeasy/auction/main/logined.jsp</result>
+        	<result name="noLogined" type="dispatcher">/WEB-INF/pages/useeasy/auction/main/noLogined.jsp</result>
+        	<result name="specialLogin" type="dispatcher">/WEB-INF/pages/useeasy/auction/main/specialLogin.jsp</result>
+        	<result name="specialLogined" type="dispatcher">/WEB-INF/pages/useeasy/auction/main/specialLogined.jsp</result>
+          
+        </action>
+        
+        <action name="registerManage_*" class="registerManage" method="{1}">
+        	<result name="register" type="dispatcher">/WEB-INF/pages/useeasy/auction/register/register.jsp</result>
+        	<result name="checkAccount" type="dispatcher">/WEB-INF/pages/useeasy/auction/register/checkAccount.jsp</result>
+       		<result name="registerSuc" type="dispatcher">/WEB-INF/pages/useeasy/auction/register/registerSuc.jsp</result>
+   			<result name="validateErr" type="dispatcher">/WEB-INF/pages/useeasy/auction/register/validateErr.jsp</result>
+       		<result name="validateSuc" type="dispatcher">/WEB-INF/pages/useeasy/auction/register/validateSuc.jsp</result>
+       	</action>
+        
+        <action name="recoverPassManage_*" class="recoverPassManage" method="{1}">
+        	<result name="phone" type="dispatcher">/WEB-INF/pages/useeasy/auction/recoverPass/phone.jsp</result>
+        	<result name="phoneLogin" type="dispatcher">/WEB-INF/pages/useeasy/auction/recoverPass/phoneLogin.jsp</result>
+        	<result name="email" type="dispatcher">/WEB-INF/pages/useeasy/auction/recoverPass/email.jsp</result>
+        	<result name="emailLogin" type="dispatcher">/WEB-INF/pages/useeasy/auction/recoverPass/emailLogin.jsp</result>
+        </action>
+        
+        <action name="guestManage_*" class="guestManage" method="{1}">
+        	<result name="edit" type="dispatcher">/WEB-INF/pages/useeasy/auction/guest/edit.jsp</result>
+        	<result name="saved" type="redirectAction">
+    			<param name="actionName">guestManage_edit</param>
+    			<param name="namespace">/</param>
+    		</result>
+    		<result name="passEdit" type="dispatcher">/WEB-INF/pages/useeasy/auction/guest/passEdit.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="companyManage_*" class="companyManage" method="{1}">
+        	<result name="edit" type="dispatcher">/WEB-INF/pages/useeasy/auction/company/edit.jsp</result>
+        	<result name="saved" type="redirectAction">
+    			<param name="actionName">companyManage_edit</param>
+    			<param name="namespace">/</param>
+    		</result>
+    		<result name="passEdit" type="dispatcher">/WEB-INF/pages/useeasy/auction/company/passEdit.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="auctionManage_*" class="auctionManage" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/index.jsp</result>
+        	<result name="add" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/add.jsp</result>
+        	<result name="businessManager" type="dispatcher">/WEB-INF/pages/useeasy/auction/main/business/BusinessManager.jsp</result>
+        	<result name="error" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/error.jsp</result>
+        	<result name="saved" type="redirectAction">
+    			<param name="actionName">auctionManage_index</param>
+    			<param name="namespace">/</param>
+    		</result>
+        	<result name="edit" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/edit.jsp</result>
+        	<result name="detail" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/detail.jsp</result>
+        	<result name="teamTypeIndex" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/teamTypeIndex.jsp</result>
+        	<result name="teamTypeAdd" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/teamTypeAdd.jsp</result>
+        	<result name="teamTypeSaved" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/teamTypeSaved.jsp</result>
+        	<result name="fileResource" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/fileResource.jsp</result>
+        	<result name="showStatus" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/showStatus.jsp</result>
+        	<result name="analyze" type="dispatcher">/WEB-INF/pages/useeasy/auction/auction/analyze.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+         
+        <action name="itemManage_*" class="itemManage" method="{1}">
+        	<result name="error" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/error.jsp</result>
+        	<result name="editIndex" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/editIndex.jsp</result>
+        	<result name="detailIndex" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/detailIndex.jsp</result>
+        	<result name="add" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/add.jsp</result>
+        	<result name="edit" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/edit.jsp</result>
+        	<result name="detail" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/detail.jsp</result>
+        	<result name="saved" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/saved.jsp</result>
+        	<result name="importItems" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/importItems.jsp</result>
+        	<result name="importPerson" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/importPerson.jsp</result>
+        	<result name="uploadPicAll" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/uploadPicAll.jsp</result>
+        	<result name="picManage" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/picManage.jsp</result>
+        	<result name="picRemoved" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/picRemoved.jsp</result>
+        	<result name="uploadPic" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/uploadPic.jsp</result>
+        	<result name="beforPmbb" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/berforPmhbb.jsp</result>
+        	<result name="showPrice" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/showPrice.jsp</result>
+        	<result name="showResult" type="dispatcher">/WEB-INF/pages/useeasy/auction/item/showResult.jsp</result>
+        	<result name="afterPmhbb">/WEB-INF/pages/useeasy/auction/item/afterPmhbb.jsp</result>
+        	<result name="auctionManage_index" type="chain">auctionManage_index</result> 
+        	<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="biddingManage_*" class="biddingManage" method="{1}">
+        	<result name="error" type="dispatcher">/WEB-INF/pages/useeasy/auction/bidding/error.jsp</result>
+        	<result name="toXml" type="dispatcher">/WEB-INF/pages/useeasy/auction/bidding/toXml.jsp</result>
+        	<result name="controller" type="dispatcher">/WEB-INF/pages/useeasy/auction/bidding/controller.jsp</result>
+        	<result name="console" type="dispatcher">/WEB-INF/pages/useeasy/auction/bidding/console.jsp</result>
+        	<result name="bigConsole" type="dispatcher">/WEB-INF/pages/useeasy/auction/bidding/bigConsole.jsp</result>
+        	
+        	<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="guestApplication_*" class="guestApplication" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/index.jsp</result>
+        	<result name="checkApply" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/checkApply.jsp</result>
+        	<!--<result name="applyIndex" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/applyIndex.jsp</result>-->
+        	<result name="apply" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/apply.jsp</result>
+        	<result name="applyed" type="redirectAction">
+    			<param name="actionName">guestApplication_index</param>
+    			<param name="namespace">/</param>
+    		</result>
+    		<result name="showApply" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/showApply.jsp</result>
+        	<result name="checkCustomer" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/checkCustomer.jsp</result>
+        	<result name="customer" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/customer.jsp</result>
+        	<result name="bankUrl" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/bankUrl.jsp</result>
+        	<result name="error" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/error.jsp</result>
+        	<result name="checkAuction" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/checkAuction.jsp</result>
+        	<result name="customerWait" type="dispatcher">/WEB-INF/pages/useeasy/auction/application/customerWait.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="companyAudit_*" class="companyAudit" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/audit/index.jsp</result>
+        	<result name="check" type="dispatcher">/WEB-INF/pages/useeasy/auction/audit/check.jsp</result>
+        	<result name="checked" type="dispatcher">/WEB-INF/pages/useeasy/auction/audit/checked.jsp</result>
+    		<result name="detail" type="dispatcher">/WEB-INF/pages/useeasy/auction/audit/detail.jsp</result>
+        	<result name="authority" type="dispatcher">/WEB-INF/pages/useeasy/auction/audit/authority.jsp</result>
+    		<result name="reAuthority" type="dispatcher">/WEB-INF/pages/useeasy/auction/audit/reAuthority.jsp</result>
+    		<result name="margin" type="dispatcher">/WEB-INF/pages/useeasy/auction/audit/margin.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="guestProxy_*" class="guestProxy" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestProxy/index.jsp</result>
+        	<result name="error" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestProxy/error.jsp</result>
+        	<result name="handle" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestProxy/handle.jsp</result>
+        	<result name="handled" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestProxy/handled.jsp</result>
+        	<result name="detail" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestProxy/detail.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="biddingView_*" class="biddingView" method="{1}">
+        	<result name="checkViewer" type="dispatcher">/WEB-INF/pages/useeasy/auction/viewer/checkViewer.jsp</result>
+        	<result name="viewer" type="dispatcher">/WEB-INF/pages/useeasy/auction/viewer/viewer.jsp</result>
+        	<result name="checkAuction" type="dispatcher">/WEB-INF/pages/useeasy/auction/viewer/checkAuction.jsp</result>
+        	<result name="viewerWait" type="dispatcher">/WEB-INF/pages/useeasy/auction/viewer/viewerWait.jsp</result>
+        	
+        	<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="guestBidRecord_*" class="guestBidRecord" method="{1}">
+        	<result name="auctionList" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestBidRecord/auction_list.jsp</result>
+        	<result name="itemList"  type="dispatcher">/WEB-INF/pages/useeasy/auction/guestBidRecord/item_list.jsp</result>
+        	<result name="priceList"  type="dispatcher">/WEB-INF/pages/useeasy/auction/guestBidRecord/price_list.jsp</result>
+        
+        	<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="guestDealRecord_*" class="guestDealRecord" method="{1}">
+        	<result name="auctionList" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestDealRecord/auction_list.jsp</result>
+        	<result name="itemList" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestDealRecord/item_list.jsp</result>
+        	<result name="itemListPay" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestDealRecord/item_list_pay.jsp</result>
+        	<result name="bankUrl" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestDealRecord/bankUrl.jsp</result>
+        	<result name="error" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestDealRecord/error.jsp</result>
+        	
+        	<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="guestFinance_*" class="guestFinance" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestFinance/index.jsp</result>
+        	<result name="detail" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestFinance/detail.jsp</result>
+        	<result name="payDetail" type="dispatcher">/WEB-INF/pages/useeasy/auction/guestFinance/pay_detail.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+         
+   		<action name="companyFinance_*" class="companyFinance" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyFinance/index.jsp</result>
+        	<result name="detail" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyFinance/detail.jsp</result>
+        	<result name="settlement" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyFinance/settlement.jsp</result>
+        	<result name="marginBack" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyFinance/margin_back.jsp</result>
+        	<result name="marginBacked" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyFinance/margin_backed.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="companyBulletin_*" class="companyBulletin" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/bulletin/index.jsp</result>
+        	<result name="add" type="dispatcher">/WEB-INF/pages/useeasy/auction/bulletin/add.jsp</result>
+        	<result name="saved" type="dispatcher">/WEB-INF/pages/useeasy/auction/bulletin/saved.jsp</result>
+        	<result name="edit" type="dispatcher">/WEB-INF/pages/useeasy/auction/bulletin/edit.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="companyIndex_*" class="companyIndex" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyIndex/index.jsp</result>
+        	<result name="about" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyIndex/about.jsp</result>
+        	<result name="connection" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyIndex/connection.jsp</result>
+        	<result name="bulletin" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyIndex/bulletin.jsp</result>
+        	
+        </action>
+        
+        <action name="adminManage_*" class="adminManage" method="{1}">
+        	<result name="passEdit" type="dispatcher">/WEB-INF/pages/useeasy/auction/admin/passEdit.jsp</result>
+        	<result name="auctionIndex" type="dispatcher">/WEB-INF/pages/useeasy/auction/admin/auctionIndex.jsp</result>
+        	<result name="guideIndex" type="dispatcher">/WEB-INF/pages/useeasy/auction/admin/guideIndex.jsp</result>
+        	<result name="guideAdd" type="dispatcher">/WEB-INF/pages/useeasy/auction/admin/guideAdd.jsp</result>
+        	<result name="guideEdit" type="dispatcher">/WEB-INF/pages/useeasy/auction/admin/guideEdit.jsp</result>
+        	<result name="guideSaved" type="dispatcher">/WEB-INF/pages/useeasy/auction/admin/guideSaved.jsp</result>
+        	
+        		<result name="companyList">/WEB-INF/pages/useeasy/auction/company/companyListlist.jsp</result>
+    		<result name="addCompanyUI">/WEB-INF/pages/useeasy/auction/company/addcompanyUI.jsp</result>
+    	    <result name="updateCompanyUI">/WEB-INF/pages/useeasy/auction/company/updateCompanyUI.jsp</result>
+    		<result name="addAccountUI">/WEB-INF/pages/useeasy/auction/company/addAccountUI.jsp</result>
+    		<result name="accountList">/WEB-INF/pages/useeasy/auction/company/accountlist.jsp</result>
+    		<result name="jaccountList">/WEB-INF/pages/useeasy/auction/company/jaccountlist.jsp</result>
+    		<result name="accountManage">/WEB-INF/pages/useeasy/auction/company/accountManage.jsp</result>
+    		<result name="accountSerach">/WEB-INF/pages/useeasy/auction/company/accountSerach.jsp</result>
+    		<result name="jaccountSerach">/WEB-INF/pages/useeasy/auction/company/jaccountSerach.jsp</result>
+    		<result name="findList">/WEB-INF/pages/useeasy/auction/company/sfzSerach.jsp</result>
+    		 <result name="sucess">/WEB-INF/pages/useeasy/auction/company/sucess.jsp</result>
+    		 <result name="editPrilige">/WEB-INF/pages/useeasy/auction/company/editPrilige.jsp</result>
+    		
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        
+        <action name="companyPayment_*" class="companyPayment" method="{1}">
+        	<result name="index" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyPayment/index.jsp</result>
+        	<result name="detail" type="dispatcher">/WEB-INF/pages/useeasy/auction/companyPayment/detail.jsp</result>
+        	
+    		<interceptor-ref name="defaultStack-authority"></interceptor-ref>
+        </action>
+        <action name="MissDayAction_*" class="missday" method="{1}">
+          <result name="success">/zhuce.jsp</result>
+          <result name="error">/error.jsp</result>
+        </action>
+    </package>
+	
+</struts>

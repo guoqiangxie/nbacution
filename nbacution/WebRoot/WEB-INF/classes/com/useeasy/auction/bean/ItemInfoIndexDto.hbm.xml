@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.useeasy.auction.bean.ItemInfoIndexDto" table="auction_item_info" catalog="pmh" schema="dbo">
+	 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+        <property name="deleteFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="delete_flag" length="50" />
+        </property>
+        
+        <property name="auctionId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pub_id" length="50" />
+        </property>
+        <property name="itemName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_cname" length="2000" />
+        </property>
+        <property name="itemNumber" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_number" length="50" />
+        </property>
+		<property name="recommendFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="recommend_type" length="50" />
+        </property>
+        <property name="itemReferencePriceFir" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_reference_1" length="50" />
+        </property>
+        <property name="itemReferencePriceSec" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_reference_2" length="50" />
+        </property>
+        <property name="itemDescription" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_discribe" length="5000" />
+        </property>
+        <property name="itemLockFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_publish" length="50" />
+        </property>
+        <property name="itemStatus" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="o_state" length="50" />
+        </property>
+        <property name="itemType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="type_id" length="50" />
+        </property>
+        
+        <property name="auctionStatus"  formula="(select pmh.auction_status from pmh.dbo.auction_pmh_info pmh where pmh.id_num = pub_id)" />
+        <property name="auctionDeleteFlag"  formula="(select pmh.delete_flag from pmh.dbo.auction_pmh_info pmh where pmh.id_num = pub_id)" />
+        <property name="publishFlag"  formula="(select pmh.publish_flag from pmh.dbo.auction_pmh_info pmh where pmh.id_num = pub_id)" />
+        
+        <!-- <property name="imgUrl"  formula="(select top 1 u.upload_url from pmh.dbo.auction_upload_img_info u where u.relation_id = id_num order by u.id_num)" />
+         --><property name="imgCountFlag"  formula="(select count(*) from pmh.dbo.auction_upload_img_info u where u.relation_id = id_num )" />
+        
+        <property name="companyId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="c_id" length="50" />
+        </property>
+	</class>
+</hibernate-mapping>

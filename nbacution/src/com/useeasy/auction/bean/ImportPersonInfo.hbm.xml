@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.bean.ImportPersonInfo" table="ImportPersonInfo" catalog="pmh" schema="dbo">
+	 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Integer" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+        <property name="uName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="uName" length="50" />
+        </property>
+        
+         <property name="uSex" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="uSex" length="4" />
+        </property>
+        
+         <property name="tel" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="tel" length="50" />
+        </property>
+        
+         <property name="address" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="address" length="500" />
+        </property>
+        
+         <property name="bid" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="bid" length="50" />
+        </property>
+         
+          <property name="pmh_id" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="pmh_id" length="50" />
+        </property>
+        
+     </class>
+     
+</hibernate-mapping>

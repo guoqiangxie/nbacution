@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	  
+	<class  name="com.useeasy.auction.bean.AuctionInfo" table="auction_pmh_info" catalog="pmh" schema="dbo">
+	   <cache usage="read-write" include="all" region="com.useeasy.auction.bean.AuctionInfo"/>
+     	<id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+           
+        </id>
+       
+        <property name="createTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="create_time" length="7" />
+        </property>
+        <property name="updateTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="update_time" length="7" />
+        </property>
+        <property name="deleteFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="delete_flag" length="50" />
+        </property>
+        
+        <property name="auctionName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_name" length="200" />
+        </property>
+        <property name="auctionCompanyId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_company_id" length="50" />
+        </property>
+        <property name="auctionForm" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_form" length="50" />
+        </property>
+        <property name="auctionDelegation" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_delegation" length="50" />
+        </property>
+        <property name="auctionNature" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_nature" length="50" />
+        </property>
+        <property name="auctionType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_type" length="50" />
+        </property>
+        <property name="auctionStartTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="auction_start_time" length="7" />
+        </property>
+        <property name="auctionAddress" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_address" length="200" />
+        </property>
+        <property name="auctionLinkTel" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_link_tel" length="50" />
+        </property>
+        <property name="auctionPicType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_pic_type" length="50" />
+        </property>
+        <property name="auctionPicVal" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_pic_val" length="50" />
+        </property>
+        <property name="auctionPicUrl"  formula="( select img.upload_url from pmh.dbo.auction_upload_img_info img where img.id_num = auction_pic_val)" />
+        <property name="auctionBulletin" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_bulletin" length="5000" />
+        </property>
+        <property name="auctionNotice" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_notice" length="5000" />
+        </property>
+        <property name="auctionGuide" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_guide" length="5000" />
+        </property>
+        <property name="auctionDescription" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_description" length="5000" />
+        </property>
+        <property name="auctionStatus" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_status" length="50" />
+        </property>
+        <property name="auctionOnlineUser" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_online_user" length="50" />
+        </property>
+        <property name="auctionOnlineMaxUser" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_online_max_user" length="50" />
+        </property>
+        <property name="auctionCountTime" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_count_time" length="50" />
+        </property>
+        <property name="auctionKind" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_kind" length="50" />
+        </property>
+        <property name="auctionNum" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_num" length="50" />
+        </property>
+        <property name="auctionWebPay" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_web_pay" length="50" />
+        </property>
+        
+        <property name="auctionWebPayCheck" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_web_pay_check" length="50" />
+        </property>
+        <property name="auctionMarginMax" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_margin_max" length="50" />
+        </property>
+        <property name="auctionMarginLevelFir" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_margin_level_fir" length="50" />
+        </property>
+        <property name="auctionMarginLevelSec" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_margin_level_sec" length="50" />
+        </property>
+        <property name="auctionMarginLevelThi" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_margin_level_thi" length="50" />
+        </property>
+        <property name="auctionWebPayGoods" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_web_pay_goods" length="50" />
+        </property>
+        <property name="auctionShortName" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_short_name" length="50" />
+        </property>
+        
+        <property name="xmlFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="xml_flag" length="50" />
+        </property>
+        <property name="sortFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="sort_flag" length="50" />
+        </property>
+        <property name="publishFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="publish_flag" length="50" />
+        </property>
+        
+        <property name="autoBidNum" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auto_bid_num" length="50" />
+        </property>
+        <property name="autoCurrentBidNum" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auto_current_bid_num" length="50" />
+        </property>
+        <property name="xmlNumFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="xml_num_flag" length="50" />
+        </property>
+        <property name="controllerNumFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="controller_num_flag" length="50" />
+        </property>
+        
+        <property name="loginUrl" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="login_url" length="200" />
+        </property>
+        <property name="visitUrl" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="visit_url" length="200" />
+        </property>
+        
+     </class>
+     
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.useeasy.auction.bean.ItemGoods" table="auction_goods_info" catalog="pmh" schema="dbo">
+	 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Long" unsaved-value="0" >
+			<column name="id_num" precision="22" scale="0" />
+			<generator class="identity">
+            </generator>
+        </id>
+        <property name="createTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="create_time" length="7" />
+        </property>
+        <!--<property name="updateTime" type="java.util.Date" update="true" insert="true" not-null="false">
+            <column name="update_time" length="7" />
+        </property>
+        <property name="deleteFlag" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="delete_flag" length="50" />
+        </property>-->
+        
+        <property name="accountId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="account_id" length="50" />
+        </property>
+        <property name="auctionId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="auction_id" length="50" />
+        </property>
+        <property name="companyId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="company_id" length="50" />
+        </property>
+        <property name="itemId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="item_id" length="50" />
+        </property><!--
+        
+        <property name="marginVal" type="java.lang.Long" update="true" insert="true" not-null="false">
+            <column name="margin_val" precision="22" scale="0" />
+        </property>-->
+        <property name="goodsVal" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="goods_val" length="100" />
+        </property>
+        <property name="goodsType" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="goods_type" length="50" />
+        </property>
+        
+        <property name="orderId" type="java.lang.String" update="true" insert="true" not-null="false">
+            <column name="order_id" length="50" />
+        </property>
+        
+     </class>
+    
+    
+</hibernate-mapping>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.useeasy.auction.notice.bean.AuctionNotice" table="AuctionNotice"
+		catalog="pmh" schema="dbo">
+		 <cache usage="read-write"/>
+		<id name="id" type="java.lang.Long" unsaved-value="0">
+			<column name="id" precision="22" scale="0" />
+			<generator class="identity">
+			</generator>
+		</id>
+		<property name="title" type="java.lang.String" update="true"
+			insert="true" not-null="false">
+			<column name="title" length="50" />
+		</property>
+		<property name="createtime" type="java.util.Date" update="true"
+			insert="true" not-null="false">
+			<column name="createtime" length="50" />
+		</property>
+		<property name="phone" type="java.lang.String" update="true"
+			insert="true" not-null="false">
+			<column name="phone" length="50" />
+		</property>
+		<property name="notice_content" type="text" update="true"
+			insert="true" not-null="false">
+			<column name="notice_content"   />
+		</property>
+		<property name="notice_type" type="java.lang.String" update="true"
+			insert="true" not-null="false">
+			<column name="notice_type" length="50" />
+		</property>
+		<property name="delete_flag" type="java.lang.String" update="true"
+			insert="true" not-null="false">
+			<column name="delete_flag" length="5">
+			</column>
+		</property>
+		<property name="pmhid" type="java.lang.Long" update="true"
+			insert="true" not-null="false">
+			<column name="pmhid" length="5">
+			</column>
+		</property>
+		<property name="tingID" type="java.lang.Integer" update="true"
+			insert="true" not-null="false">
+			<column name="tingID" length="5">
+			</column>
+		</property>
+		<property name="uid" type="java.lang.Long" update="true"
+			insert="true" not-null="false">
+			<column name="uid" length="5">
+			</column>
+		</property>
+		<property name="company" type="java.lang.String" update="true" insert="true" 
+			not-null="false">
+			 <column name="company" length="100" /> 
+		</property>
+		<property name="pmhName" type="java.lang.String" update="true" insert="true" 
+			not-null="false">
+			 <column name="pmhName" length="200" /> 
+		</property>
+		<property name="other" type="java.lang.String" update="true" insert="true" 
+			not-null="false">
+			 <column name="other" length="50" /> 
+		</property>
+		<property name="jb" type="java.util.Date" update="true" insert="true" 
+			not-null="false">
+			 <column name="jb" length="50" /> 
+		</property>
+       <property name="pageNews" type="java.lang.String" update="true" insert="true" 
+			not-null="false">
+			 <column name="pageNews" length="50" /> 
+		</property>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="auction" location="451,165" size="4025,21000">
+    <action name="auctionIndex_*" location="3810,8926" size="150,503">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="house">
+        <resourceEdge source="house" routing="0" target="house.jsp" />
+      </result>
+      <result name="mobile">
+        <resourceEdge source="mobile" routing="0" target="mobile.jsp" />
+      </result>
+      <result name="material">
+        <resourceEdge source="material" routing="0" target="material.jsp" />
+      </result>
+      <result name="stock">
+        <resourceEdge source="stock" routing="0" target="stock.jsp" />
+      </result>
+      <result name="mlpllz">
+        <resourceEdge source="mlpllz" routing="0" target="mlpllz.jsp" />
+      </result>
+      <result name="art">
+        <resourceEdge source="art" routing="0" target="art.jsp" />
+      </result>
+      <result name="other">
+        <resourceEdge source="other" routing="0" target="other.jsp" />
+      </result>
+      <result name="special">
+        <resourceEdge source="special" routing="0" target="special.jsp" />
+      </result>
+      <result name="interation">
+        <resourceEdge source="interation" routing="0" target="interation.jsp" />
+      </result>
+      <result name="judicial">
+        <resourceEdge source="judicial" routing="0" target="judicial.jsp" />
+      </result>
+      <result name="society">
+        <resourceEdge source="society" routing="0" target="society.jsp" />
+      </result>
+      <result name="reference">
+        <resourceEdge source="reference" routing="0" target="reference.jsp" />
+      </result>
+      <result name="auctionDetail">
+        <resourceEdge source="auctionDetail" routing="0" target="auctionDetail.jsp" />
+      </result>
+      <result name="auctionDetailAll">
+        <resourceEdge source="auctionDetailAll" routing="0" target="auctionDetailAll.jsp" />
+      </result>
+      <result name="itemDetail">
+        <resourceEdge source="itemDetail" routing="0" target="itemDetail.jsp" />
+      </result>
+      <result name="auctionSearch">
+        <resourceEdge source="auctionSearch" routing="0" target="auctionSearch.jsp" />
+      </result>
+      <result name="itemSearch">
+        <resourceEdge source="itemSearch" routing="0" target="itemSearch.jsp" />
+      </result>
+      <result name="about">
+        <resourceEdge source="about" routing="0" target="about.jsp" />
+      </result>
+      <result name="map">
+        <resourceEdge source="map" routing="0" target="map.jsp" />
+      </result>
+      <result name="guide">
+        <resourceEdge source="guide" routing="0" target="guide.jsp" />
+      </result>
+      <result name="guideDetail">
+        <resourceEdge source="guideDetail" routing="0" target="guideDetail.jsp" />
+      </result>
+      <result name="imageDetail">
+        <resourceEdge source="imageDetail" routing="0" target="imageDetail.jsp" />
+      </result>
+    </action>
+    <action name="validationCode_*" location="3810,9507" size="150,41">
+      <result name="success" />
+    </action>
+    <action name="uploadManage_*" location="3810,9612" size="150,41">
+      <result name="imgUpload">
+        <resourceEdge source="imgUpload" routing="0" target="imgUpload.jsp" />
+      </result>
+    </action>
+    <action name="auctionLogin_*" location="3810,10281" size="150,104">
+      <result name="logined">
+        <resourceEdge source="logined" routing="0" target="logined.jsp" />
+      </result>
+      <result name="noLogined">
+        <resourceEdge source="noLogined" routing="0" target="noLogined.jsp" />
+      </result>
+      <result name="specialLogin">
+        <resourceEdge source="specialLogin" routing="0" target="specialLogin.jsp" />
+      </result>
+      <result name="specialLogined">
+        <resourceEdge source="specialLogined" routing="0" target="specialLogined.jsp" />
+      </result>
+    </action>
+    <action name="registerManage_*" location="3810,11145" size="150,125">
+      <result name="register">
+        <resourceEdge source="register" routing="0" target="register.jsp" />
+      </result>
+      <result name="checkAccount">
+        <resourceEdge source="checkAccount" routing="0" target="checkAccount.jsp" />
+      </result>
+      <result name="registerSuc">
+        <resourceEdge source="registerSuc" routing="0" target="registerSuc.jsp" />
+      </result>
+      <result name="validateErr">
+        <resourceEdge source="validateErr" routing="0" target="validateErr.jsp" />
+      </result>
+      <result name="validateSuc">
+        <resourceEdge source="validateSuc" routing="0" target="validateSuc.jsp" />
+      </result>
+    </action>
+    <action name="recoverPassManage_*" location="3810,11856" size="150,104">
+      <result name="phone">
+        <resourceEdge source="phone" routing="0" target="phone.jsp" />
+      </result>
+      <result name="phoneLogin">
+        <resourceEdge source="phoneLogin" routing="0" target="phoneLogin.jsp" />
+      </result>
+      <result name="email">
+        <resourceEdge source="email" routing="0" target="email.jsp" />
+      </result>
+      <result name="emailLogin">
+        <resourceEdge source="emailLogin" routing="0" target="emailLogin.jsp" />
+      </result>
+    </action>
+    <action name="guestManage_*" location="3810,12216" size="150,83">
+      <result name="edit">
+        <resourceEdge source="edit" routing="0" target="edit.jsp" />
+      </result>
+      <result name="saved" />
+      <result name="passEdit">
+        <resourceEdge source="passEdit" routing="0" target="passEdit.jsp" />
+      </result>
+    </action>
+    <action name="companyManage_*" location="3810,12566" size="150,83">
+      <result name="edit">
+        <resourceEdge source="edit" routing="0" target="edit.jsp" />
+      </result>
+      <result name="saved" />
+      <result name="passEdit">
+        <resourceEdge source="passEdit" routing="0" target="passEdit.jsp" />
+      </result>
+    </action>
+    <action name="auctionManage_*" location="3810,14071" size="150,293">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="add.jsp" />
+      </result>
+      <result name="businessManager">
+        <resourceEdge source="businessManager" routing="0" target="BusinessManager.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+      <result name="saved" />
+      <result name="edit">
+        <resourceEdge source="edit" routing="0" target="edit.jsp" />
+      </result>
+      <result name="detail">
+        <resourceEdge source="detail" routing="0" target="detail.jsp" />
+      </result>
+      <result name="teamTypeIndex">
+        <resourceEdge source="teamTypeIndex" routing="0" target="teamTypeIndex.jsp" />
+      </result>
+      <result name="teamTypeAdd">
+        <resourceEdge source="teamTypeAdd" routing="0" target="teamTypeAdd.jsp" />
+      </result>
+      <result name="teamTypeSaved">
+        <resourceEdge source="teamTypeSaved" routing="0" target="teamTypeSaved.jsp" />
+      </result>
+      <result name="fileResource">
+        <resourceEdge source="fileResource" routing="0" target="fileResource.jsp" />
+      </result>
+      <result name="showStatus">
+        <resourceEdge source="showStatus" routing="0" target="showStatus.jsp" />
+      </result>
+      <result name="analyze">
+        <resourceEdge source="analyze" routing="0" target="analyze.jsp" />
+      </result>
+    </action>
+    <action name="itemManage_*" location="3810,17624" size="150,398">
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+      <result name="editIndex">
+        <resourceEdge source="editIndex" routing="0" target="editIndex.jsp" />
+      </result>
+      <result name="detailIndex">
+        <resourceEdge source="detailIndex" routing="0" target="detailIndex.jsp" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="add.jsp" />
+      </result>
+      <result name="edit">
+        <resourceEdge source="edit" routing="0" target="edit.jsp" />
+      </result>
+      <result name="detail">
+        <resourceEdge source="detail" routing="0" target="detail.jsp" />
+      </result>
+      <result name="saved">
+        <resourceEdge source="saved" routing="0" target="saved.jsp" />
+      </result>
+      <result name="importItems">
+        <resourceEdge source="importItems" routing="0" target="importItems.jsp" />
+      </result>
+      <result name="importPerson">
+        <resourceEdge source="importPerson" routing="0" target="importPerson.jsp" />
+      </result>
+      <result name="uploadPicAll">
+        <resourceEdge source="uploadPicAll" routing="0" target="uploadPicAll.jsp" />
+      </result>
+      <result name="picManage">
+        <resourceEdge source="picManage" routing="0" target="picManage.jsp" />
+      </result>
+      <result name="picRemoved">
+        <resourceEdge source="picRemoved" routing="0" target="picRemoved.jsp" />
+      </result>
+      <result name="uploadPic">
+        <resourceEdge source="uploadPic" routing="0" target="uploadPic.jsp" />
+      </result>
+      <result name="beforPmbb">
+        <resourceEdge source="beforPmbb" routing="0" target="berforPmhbb.jsp" />
+      </result>
+      <result name="showPrice">
+        <resourceEdge source="showPrice" routing="0" target="showPrice.jsp" />
+      </result>
+      <result name="showResult">
+        <resourceEdge source="showResult" routing="0" target="showResult.jsp" />
+      </result>
+      <result name="afterPmhbb">
+        <resourceEdge source="afterPmhbb" routing="0" target="afterPmhbb.jsp" />
+      </result>
+      <result name="auctionManage_index" />
+    </action>
+    <action name="biddingManage_*" location="3810,18355" size="150,125">
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+      <result name="toXml">
+        <resourceEdge source="toXml" routing="0" target="toXml.jsp" />
+      </result>
+      <result name="controller">
+        <resourceEdge source="controller" routing="0" target="controller.jsp" />
+      </result>
+      <result name="console">
+        <resourceEdge source="console" routing="0" target="console.jsp" />
+      </result>
+      <result name="bigConsole">
+        <resourceEdge source="bigConsole" routing="0" target="bigConsole.jsp" />
+      </result>
+    </action>
+    <action name="guestApplication_*" location="3215,20392" size="150,251">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="checkApply">
+        <resourceEdge source="checkApply" routing="0" target="checkApply.jsp" />
+      </result>
+      <result name="apply">
+        <resourceEdge source="apply" routing="0" target="apply.jsp" />
+      </result>
+      <result name="applyed" />
+      <result name="showApply">
+        <resourceEdge source="showApply" routing="0" target="showApply.jsp" />
+      </result>
+      <result name="checkCustomer">
+        <resourceEdge source="checkCustomer" routing="0" target="checkCustomer.jsp" />
+      </result>
+      <result name="customer">
+        <resourceEdge source="customer" routing="0" target="customer.jsp" />
+      </result>
+      <result name="bankUrl">
+        <resourceEdge source="bankUrl" routing="0" target="bankUrl.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+      <result name="checkAuction">
+        <resourceEdge source="checkAuction" routing="0" target="checkAuction.jsp" />
+      </result>
+      <result name="customerWait">
+        <resourceEdge source="customerWait" routing="0" target="customerWait.jsp" />
+      </result>
+    </action>
+    <action name="companyAudit_*" location="2497,20784" size="150,167">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="check">
+        <resourceEdge source="check" routing="0" target="check.jsp" />
+      </result>
+      <result name="checked">
+        <resourceEdge source="checked" routing="0" target="checked.jsp" />
+      </result>
+      <result name="detail">
+        <resourceEdge source="detail" routing="0" target="detail.jsp" />
+      </result>
+      <result name="authority">
+        <resourceEdge source="authority" routing="0" target="authority.jsp" />
+      </result>
+      <result name="reAuthority">
+        <resourceEdge source="reAuthority" routing="0" target="reAuthority.jsp" />
+      </result>
+      <result name="margin">
+        <resourceEdge source="margin" routing="0" target="margin.jsp" />
+      </result>
+    </action>
+    <action name="guestProxy_*" location="450,20805" size="150,125">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+      <result name="handle">
+        <resourceEdge source="handle" routing="0" target="handle.jsp" />
+      </result>
+      <result name="handled">
+        <resourceEdge source="handled" routing="0" target="handled.jsp" />
+      </result>
+      <result name="detail">
+        <resourceEdge source="detail" routing="0" target="detail.jsp" />
+      </result>
+    </action>
+    <action name="biddingView_*" location="65,20816" size="150,104">
+      <result name="checkViewer">
+        <resourceEdge source="checkViewer" routing="0" target="checkViewer.jsp" />
+      </result>
+      <result name="viewer">
+        <resourceEdge source="viewer" routing="0" target="viewer.jsp" />
+      </result>
+      <result name="checkAuction">
+        <resourceEdge source="checkAuction" routing="0" target="checkAuction.jsp" />
+      </result>
+      <result name="viewerWait">
+        <resourceEdge source="viewerWait" routing="0" target="viewerWait.jsp" />
+      </result>
+    </action>
+    <action name="guestBidRecord_*" location="65,71" size="150,83">
+      <result name="auctionList">
+        <resourceEdge source="auctionList" routing="0" target="auction_list.jsp" />
+      </result>
+      <result name="itemList">
+        <resourceEdge source="itemList" routing="0" target="item_list.jsp" />
+      </result>
+      <result name="priceList">
+        <resourceEdge source="priceList" routing="0" target="price_list.jsp" />
+      </result>
+    </action>
+    <action name="guestDealRecord_*" location="3810,50" size="150,125">
+      <result name="auctionList">
+        <resourceEdge source="auctionList" routing="0" target="auction_list.jsp" />
+      </result>
+      <result name="itemList">
+        <resourceEdge source="itemList" routing="0" target="item_list.jsp" />
+      </result>
+      <result name="itemListPay">
+        <resourceEdge source="itemListPay" routing="0" target="item_list_pay.jsp" />
+      </result>
+      <result name="bankUrl">
+        <resourceEdge source="bankUrl" routing="0" target="bankUrl.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="guestFinance_*" location="3810,596" size="150,83">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="detail">
+        <resourceEdge source="detail" routing="0" target="detail.jsp" />
+      </result>
+      <result name="payDetail">
+        <resourceEdge source="payDetail" routing="0" target="pay_detail.jsp" />
+      </result>
+    </action>
+    <action name="companyFinance_*" location="3810,1275" size="150,125">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="detail">
+        <resourceEdge source="detail" routing="0" target="detail.jsp" />
+      </result>
+      <result name="settlement">
+        <resourceEdge source="settlement" routing="0" target="settlement.jsp" />
+      </result>
+      <result name="marginBack">
+        <resourceEdge source="marginBack" routing="0" target="margin_back.jsp" />
+      </result>
+      <result name="marginBacked">
+        <resourceEdge source="marginBacked" routing="0" target="margin_backed.jsp" />
+      </result>
+    </action>
+    <action name="companyBulletin_*" location="3810,2511" size="150,104">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="add.jsp" />
+      </result>
+      <result name="saved">
+        <resourceEdge source="saved" routing="0" target="saved.jsp" />
+      </result>
+      <result name="edit">
+        <resourceEdge source="edit" routing="0" target="edit.jsp" />
+      </result>
+    </action>
+    <action name="companyIndex_*" location="3810,3211" size="150,104">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="about">
+        <resourceEdge source="about" routing="0" target="about.jsp" />
+      </result>
+      <result name="connection">
+        <resourceEdge source="connection" routing="0" target="connection.jsp" />
+      </result>
+      <result name="bulletin">
+        <resourceEdge source="bulletin" routing="0" target="bulletin.jsp" />
+      </result>
+    </action>
+    <action name="adminManage_*" location="3810,4065" size="150,146">
+      <result name="passEdit">
+        <resourceEdge source="passEdit" routing="0" target="passEdit.jsp" />
+      </result>
+      <result name="auctionIndex">
+        <resourceEdge source="auctionIndex" routing="0" target="auctionIndex.jsp" />
+      </result>
+      <result name="guideIndex">
+        <resourceEdge source="guideIndex" routing="0" target="guideIndex.jsp" />
+      </result>
+      <result name="guideAdd">
+        <resourceEdge source="guideAdd" routing="0" target="guideAdd.jsp" />
+      </result>
+      <result name="guideEdit">
+        <resourceEdge source="guideEdit" routing="0" target="guideEdit.jsp" />
+      </result>
+      <result name="guideSaved">
+        <resourceEdge source="guideSaved" routing="0" target="guideSaved.jsp" />
+      </result>
+    </action>
+    <action name="companyPayment_*" location="3810,4632" size="150,62">
+      <result name="index">
+        <resourceEdge source="index" routing="0" target="index.jsp" />
+      </result>
+      <result name="detail">
+        <resourceEdge source="detail" routing="0" target="detail.jsp" />
+      </result>
+    </action>
+    <action name="MissDayAction_*" location="3810,4807" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="zhuce.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/index/index.jsp" location="4532,9285" size="150,55" />
+  <webResource name="house.jsp" path="/WEB-INF/pages/useeasy/auction/index/house.jsp" location="4532,8970" size="150,55" />
+  <webResource name="mobile.jsp" path="/WEB-INF/pages/useeasy/auction/index/mobile.jsp" location="4529,8795" size="150,55" />
+  <webResource name="material.jsp" path="/WEB-INF/pages/useeasy/auction/index/material.jsp" location="4523,8620" size="150,55" />
+  <webResource name="stock.jsp" path="/WEB-INF/pages/useeasy/auction/index/stock.jsp" location="4532,8445" size="150,55" />
+  <webResource name="mlpllz.jsp" path="/WEB-INF/pages/useeasy/auction/index/mlpllz.jsp" location="4529,8270" size="150,55" />
+  <webResource name="art.jsp" path="/WEB-INF/pages/useeasy/auction/index/art.jsp" location="4538,8095" size="150,55" />
+  <webResource name="other.jsp" path="/WEB-INF/pages/useeasy/auction/index/other.jsp" location="4532,7920" size="150,55" />
+  <webResource name="special.jsp" path="/WEB-INF/pages/useeasy/auction/index/special.jsp" location="4526,7745" size="150,55" />
+  <webResource name="interation.jsp" path="/WEB-INF/pages/useeasy/auction/index/interation.jsp" location="4517,7570" size="150,55" />
+  <webResource name="judicial.jsp" path="/WEB-INF/pages/useeasy/auction/index/judicial.jsp" location="4523,7395" size="150,55" />
+  <webResource name="society.jsp" path="/WEB-INF/pages/useeasy/auction/index/society.jsp" location="4526,7220" size="150,55" />
+  <webResource name="reference.jsp" path="/WEB-INF/pages/useeasy/auction/index/reference.jsp" location="4520,7045" size="150,55" />
+  <webResource name="auctionDetail.jsp" path="/WEB-INF/pages/useeasy/auction/index/auctionDetail.jsp" location="4543,6870" size="150,55" />
+  <webResource name="auctionDetailAll.jsp" path="/WEB-INF/pages/useeasy/auction/index/auctionDetailAll.jsp" location="4534,6695" size="150,55" />
+  <webResource name="itemDetail.jsp" path="/WEB-INF/pages/useeasy/auction/index/itemDetail.jsp" location="4517,6520" size="150,55" />
+  <webResource name="auctionSearch.jsp" path="/WEB-INF/pages/useeasy/auction/index/auctionSearch.jsp" location="4543,6345" size="150,55" />
+  <webResource name="itemSearch.jsp" path="/WEB-INF/pages/useeasy/auction/index/itemSearch.jsp" location="4517,6170" size="150,55" />
+  <webResource name="about.jsp" path="/WEB-INF/pages/useeasy/auction/index/about.jsp" location="4532,5995" size="150,55" />
+  <webResource name="map.jsp" path="/WEB-INF/pages/useeasy/auction/index/map.jsp" location="4538,5820" size="150,55" />
+  <webResource name="guide.jsp" path="/WEB-INF/pages/useeasy/auction/index/guide.jsp" location="4532,5645" size="150,55" />
+  <webResource name="guideDetail.jsp" path="/WEB-INF/pages/useeasy/auction/index/guideDetail.jsp" location="4514,5470" size="150,55" />
+  <webResource name="imageDetail.jsp" path="/WEB-INF/pages/useeasy/auction/index/imageDetail.jsp" location="4514,5295" size="150,55" />
+  <webResource name="imgUpload.jsp" path="/WEB-INF/pages/useeasy/auction/upload/imgUpload.jsp" location="4517,9740" size="150,55" />
+  <webResource name="logined.jsp" path="/WEB-INF/pages/useeasy/auction/main/logined.jsp" location="4529,10440" size="150,55" />
+  <webResource name="noLogined.jsp" path="/WEB-INF/pages/useeasy/auction/main/noLogined.jsp" location="4523,10265" size="150,55" />
+  <webResource name="specialLogin.jsp" path="/WEB-INF/pages/useeasy/auction/main/specialLogin.jsp" location="4514,10090" size="150,55" />
+  <webResource name="specialLogined.jsp" path="/WEB-INF/pages/useeasy/auction/main/specialLogined.jsp" location="4543,9915" size="150,55" />
+  <webResource name="register.jsp" path="/WEB-INF/pages/useeasy/auction/register/register.jsp" location="4514,11315" size="150,55" />
+  <webResource name="checkAccount.jsp" path="/WEB-INF/pages/useeasy/auction/register/checkAccount.jsp" location="4537,11140" size="150,55" />
+  <webResource name="registerSuc.jsp" path="/WEB-INF/pages/useeasy/auction/register/registerSuc.jsp" location="4540,10965" size="150,55" />
+  <webResource name="validateErr.jsp" path="/WEB-INF/pages/useeasy/auction/register/validateErr.jsp" location="4540,10790" size="150,55" />
+  <webResource name="validateSuc.jsp" path="/WEB-INF/pages/useeasy/auction/register/validateSuc.jsp" location="4540,10615" size="150,55" />
+  <webResource name="phone.jsp" path="/WEB-INF/pages/useeasy/auction/recoverPass/phone.jsp" location="4514,12015" size="150,55" />
+  <webResource name="phoneLogin.jsp" path="/WEB-INF/pages/useeasy/auction/recoverPass/phoneLogin.jsp" location="4534,11840" size="150,55" />
+  <webResource name="email.jsp" path="/WEB-INF/pages/useeasy/auction/recoverPass/email.jsp" location="4514,11665" size="150,55" />
+  <webResource name="emailLogin.jsp" path="/WEB-INF/pages/useeasy/auction/recoverPass/emailLogin.jsp" location="4534,11490" size="150,55" />
+  <webResource name="edit.jsp" path="/WEB-INF/pages/useeasy/auction/guest/edit.jsp" location="4535,12365" size="150,55" />
+  <webResource name="passEdit.jsp" path="/WEB-INF/pages/useeasy/auction/guest/passEdit.jsp" location="4523,12190" size="150,55" />
+  <webResource name="edit.jsp" path="/WEB-INF/pages/useeasy/auction/company/edit.jsp" location="4529,12715" size="150,55" />
+  <webResource name="passEdit.jsp" path="/WEB-INF/pages/useeasy/auction/company/passEdit.jsp" location="4517,12540" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/auction/index.jsp" location="4526,14885" size="150,55" />
+  <webResource name="add.jsp" path="/WEB-INF/pages/useeasy/auction/auction/add.jsp" location="4532,14710" size="150,55" />
+  <webResource name="BusinessManager.jsp" path="/WEB-INF/pages/useeasy/auction/main/business/BusinessManager.jsp" location="4513,14535" size="150,55" />
+  <webResource name="error.jsp" path="/WEB-INF/pages/useeasy/auction/auction/error.jsp" location="4526,14325" size="150,55" />
+  <webResource name="edit.jsp" path="/WEB-INF/pages/useeasy/auction/auction/edit.jsp" location="4529,14115" size="150,55" />
+  <webResource name="detail.jsp" path="/WEB-INF/pages/useeasy/auction/auction/detail.jsp" location="4523,13940" size="150,55" />
+  <webResource name="teamTypeIndex.jsp" path="/WEB-INF/pages/useeasy/auction/auction/teamTypeIndex.jsp" location="4537,13765" size="150,55" />
+  <webResource name="teamTypeAdd.jsp" path="/WEB-INF/pages/useeasy/auction/auction/teamTypeAdd.jsp" location="4543,13590" size="150,55" />
+  <webResource name="teamTypeSaved.jsp" path="/WEB-INF/pages/useeasy/auction/auction/teamTypeSaved.jsp" location="4537,13415" size="150,55" />
+  <webResource name="fileResource.jsp" path="/WEB-INF/pages/useeasy/auction/auction/fileResource.jsp" location="4540,13240" size="150,55" />
+  <webResource name="showStatus.jsp" path="/WEB-INF/pages/useeasy/auction/auction/showStatus.jsp" location="4511,13065" size="150,55" />
+  <webResource name="analyze.jsp" path="/WEB-INF/pages/useeasy/auction/auction/analyze.jsp" location="4520,12890" size="150,55" />
+  <webResource name="error.jsp" path="/WEB-INF/pages/useeasy/auction/item/error.jsp" location="4535,17930" size="150,55" />
+  <webResource name="editIndex.jsp" path="/WEB-INF/pages/useeasy/auction/item/editIndex.jsp" location="4523,17685" size="150,55" />
+  <webResource name="detailIndex.jsp" path="/WEB-INF/pages/useeasy/auction/item/detailIndex.jsp" location="4517,17510" size="150,55" />
+  <webResource name="add.jsp" path="/WEB-INF/pages/useeasy/auction/item/add.jsp" location="4541,17335" size="150,55" />
+  <webResource name="edit.jsp" path="/WEB-INF/pages/useeasy/auction/item/edit.jsp" location="4538,17160" size="150,55" />
+  <webResource name="detail.jsp" path="/WEB-INF/pages/useeasy/auction/item/detail.jsp" location="4532,16985" size="150,55" />
+  <webResource name="saved.jsp" path="/WEB-INF/pages/useeasy/auction/item/saved.jsp" location="4535,16810" size="150,55" />
+  <webResource name="importItems.jsp" path="/WEB-INF/pages/useeasy/auction/item/importItems.jsp" location="4517,16635" size="150,55" />
+  <webResource name="importPerson.jsp" path="/WEB-INF/pages/useeasy/auction/item/importPerson.jsp" location="4514,16460" size="150,55" />
+  <webResource name="uploadPicAll.jsp" path="/WEB-INF/pages/useeasy/auction/item/uploadPicAll.jsp" location="4514,16285" size="150,55" />
+  <webResource name="picManage.jsp" path="/WEB-INF/pages/useeasy/auction/item/picManage.jsp" location="4523,16110" size="150,55" />
+  <webResource name="picRemoved.jsp" path="/WEB-INF/pages/useeasy/auction/item/picRemoved.jsp" location="4520,15935" size="150,55" />
+  <webResource name="uploadPic.jsp" path="/WEB-INF/pages/useeasy/auction/item/uploadPic.jsp" location="4523,15760" size="150,55" />
+  <webResource name="berforPmhbb.jsp" path="/WEB-INF/pages/useeasy/auction/item/berforPmhbb.jsp" location="4517,15585" size="150,55" />
+  <webResource name="showPrice.jsp" path="/WEB-INF/pages/useeasy/auction/item/showPrice.jsp" location="4523,15410" size="150,55" />
+  <webResource name="showResult.jsp" path="/WEB-INF/pages/useeasy/auction/item/showResult.jsp" location="4520,15235" size="150,55" />
+  <webResource name="afterPmhbb.jsp" path="/WEB-INF/pages/useeasy/auction/item/afterPmhbb.jsp" location="4520,15060" size="150,55" />
+  <webResource name="error.jsp" path="/WEB-INF/pages/useeasy/auction/bidding/error.jsp" location="4526,18875" size="150,55" />
+  <webResource name="toXml.jsp" path="/WEB-INF/pages/useeasy/auction/bidding/toXml.jsp" location="4526,18700" size="150,55" />
+  <webResource name="controller.jsp" path="/WEB-INF/pages/useeasy/auction/bidding/controller.jsp" location="4511,18525" size="150,55" />
+  <webResource name="console.jsp" path="/WEB-INF/pages/useeasy/auction/bidding/console.jsp" location="4520,18350" size="150,55" />
+  <webResource name="bigConsole.jsp" path="/WEB-INF/pages/useeasy/auction/bidding/bigConsole.jsp" location="4511,18175" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/application/index.jsp" location="4514,20625" size="150,55" />
+  <webResource name="checkApply.jsp" path="/WEB-INF/pages/useeasy/auction/application/checkApply.jsp" location="4534,20450" size="150,55" />
+  <webResource name="apply.jsp" path="/WEB-INF/pages/useeasy/auction/application/apply.jsp" location="4514,20275" size="150,55" />
+  <webResource name="showApply.jsp" path="/WEB-INF/pages/useeasy/auction/application/showApply.jsp" location="4537,20100" size="150,55" />
+  <webResource name="checkCustomer.jsp" path="/WEB-INF/pages/useeasy/auction/application/checkCustomer.jsp" location="4525,19925" size="150,55" />
+  <webResource name="customer.jsp" path="/WEB-INF/pages/useeasy/auction/application/customer.jsp" location="4540,19750" size="150,55" />
+  <webResource name="bankUrl.jsp" path="/WEB-INF/pages/useeasy/auction/application/bankUrl.jsp" location="4543,19575" size="150,55" />
+  <webResource name="error.jsp" path="/WEB-INF/pages/useeasy/auction/application/error.jsp" location="4514,19400" size="150,55" />
+  <webResource name="checkAuction.jsp" path="/WEB-INF/pages/useeasy/auction/application/checkAuction.jsp" location="4528,19225" size="150,55" />
+  <webResource name="customerWait.jsp" path="/WEB-INF/pages/useeasy/auction/application/customerWait.jsp" location="4528,19050" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/audit/index.jsp" location="2747,21220" size="150,55" />
+  <webResource name="check.jsp" path="/WEB-INF/pages/useeasy/auction/audit/check.jsp" location="3132,21220" size="150,55" />
+  <webResource name="checked.jsp" path="/WEB-INF/pages/useeasy/auction/audit/checked.jsp" location="3511,21220" size="150,55" />
+  <webResource name="detail.jsp" path="/WEB-INF/pages/useeasy/auction/audit/detail.jsp" location="3899,21220" size="150,55" />
+  <webResource name="authority.jsp" path="/WEB-INF/pages/useeasy/auction/audit/authority.jsp" location="4275,21220" size="150,55" />
+  <webResource name="reAuthority.jsp" path="/WEB-INF/pages/useeasy/auction/audit/reAuthority.jsp" location="4514,20975" size="150,55" />
+  <webResource name="margin.jsp" path="/WEB-INF/pages/useeasy/auction/audit/margin.jsp" location="4529,20800" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/guestProxy/index.jsp" location="807,21220" size="150,55" />
+  <webResource name="error.jsp" path="/WEB-INF/pages/useeasy/auction/guestProxy/error.jsp" location="1192,21220" size="150,55" />
+  <webResource name="handle.jsp" path="/WEB-INF/pages/useeasy/auction/guestProxy/handle.jsp" location="1574,21220" size="150,55" />
+  <webResource name="handled.jsp" path="/WEB-INF/pages/useeasy/auction/guestProxy/handled.jsp" location="1956,21220" size="150,55" />
+  <webResource name="detail.jsp" path="/WEB-INF/pages/useeasy/auction/guestProxy/detail.jsp" location="2344,21220" size="150,55" />
+  <webResource name="checkViewer.jsp" path="/WEB-INF/pages/useeasy/auction/viewer/checkViewer.jsp" location="66,20625" size="150,55" />
+  <webResource name="viewer.jsp" path="/WEB-INF/pages/useeasy/auction/viewer/viewer.jsp" location="81,20800" size="150,55" />
+  <webResource name="checkAuction.jsp" path="/WEB-INF/pages/useeasy/auction/viewer/checkAuction.jsp" location="28,20975" size="150,55" />
+  <webResource name="viewerWait.jsp" path="/WEB-INF/pages/useeasy/auction/viewer/viewerWait.jsp" location="419,21220" size="150,55" />
+  <webResource name="auction_list.jsp" path="/WEB-INF/pages/useeasy/auction/guestBidRecord/auction_list.jsp" location="844,10" size="150,55" />
+  <webResource name="item_list.jsp" path="/WEB-INF/pages/useeasy/auction/guestBidRecord/item_list.jsp" location="398,10" size="150,55" />
+  <webResource name="price_list.jsp" path="/WEB-INF/pages/useeasy/auction/guestBidRecord/price_list.jsp" location="10,220" size="150,55" />
+  <webResource name="auction_list.jsp" path="/WEB-INF/pages/useeasy/auction/guestDealRecord/auction_list.jsp" location="4516,570" size="150,55" />
+  <webResource name="item_list.jsp" path="/WEB-INF/pages/useeasy/auction/guestDealRecord/item_list.jsp" location="4525,395" size="150,55" />
+  <webResource name="item_list_pay.jsp" path="/WEB-INF/pages/useeasy/auction/guestDealRecord/item_list_pay.jsp" location="4513,220" size="150,55" />
+  <webResource name="bankUrl.jsp" path="/WEB-INF/pages/useeasy/auction/guestDealRecord/bankUrl.jsp" location="4146,10" size="150,55" />
+  <webResource name="error.jsp" path="/WEB-INF/pages/useeasy/auction/guestDealRecord/error.jsp" location="3697,10" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/guestFinance/index.jsp" location="4511,1095" size="150,55" />
+  <webResource name="detail.jsp" path="/WEB-INF/pages/useeasy/auction/guestFinance/detail.jsp" location="4543,920" size="150,55" />
+  <webResource name="pay_detail.jsp" path="/WEB-INF/pages/useeasy/auction/guestFinance/pay_detail.jsp" location="4531,745" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/companyFinance/index.jsp" location="4540,1970" size="150,55" />
+  <webResource name="detail.jsp" path="/WEB-INF/pages/useeasy/auction/companyFinance/detail.jsp" location="4537,1795" size="150,55" />
+  <webResource name="settlement.jsp" path="/WEB-INF/pages/useeasy/auction/companyFinance/settlement.jsp" location="4525,1620" size="150,55" />
+  <webResource name="margin_back.jsp" path="/WEB-INF/pages/useeasy/auction/companyFinance/margin_back.jsp" location="4522,1445" size="150,55" />
+  <webResource name="margin_backed.jsp" path="/WEB-INF/pages/useeasy/auction/companyFinance/margin_backed.jsp" location="4516,1270" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/bulletin/index.jsp" location="4523,2670" size="150,55" />
+  <webResource name="add.jsp" path="/WEB-INF/pages/useeasy/auction/bulletin/add.jsp" location="4529,2495" size="150,55" />
+  <webResource name="saved.jsp" path="/WEB-INF/pages/useeasy/auction/bulletin/saved.jsp" location="4523,2320" size="150,55" />
+  <webResource name="edit.jsp" path="/WEB-INF/pages/useeasy/auction/bulletin/edit.jsp" location="4526,2145" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/companyIndex/index.jsp" location="4511,3370" size="150,55" />
+  <webResource name="about.jsp" path="/WEB-INF/pages/useeasy/auction/companyIndex/about.jsp" location="4511,3195" size="150,55" />
+  <webResource name="connection.jsp" path="/WEB-INF/pages/useeasy/auction/companyIndex/connection.jsp" location="4531,3020" size="150,55" />
+  <webResource name="bulletin.jsp" path="/WEB-INF/pages/useeasy/auction/companyIndex/bulletin.jsp" location="4537,2845" size="150,55" />
+  <webResource name="passEdit.jsp" path="/WEB-INF/pages/useeasy/auction/admin/passEdit.jsp" location="4523,4420" size="150,55" />
+  <webResource name="auctionIndex.jsp" path="/WEB-INF/pages/useeasy/auction/admin/auctionIndex.jsp" location="4511,4245" size="150,55" />
+  <webResource name="guideIndex.jsp" path="/WEB-INF/pages/useeasy/auction/admin/guideIndex.jsp" location="4517,4070" size="150,55" />
+  <webResource name="guideAdd.jsp" path="/WEB-INF/pages/useeasy/auction/admin/guideAdd.jsp" location="4523,3895" size="150,55" />
+  <webResource name="guideEdit.jsp" path="/WEB-INF/pages/useeasy/auction/admin/guideEdit.jsp" location="4520,3720" size="150,55" />
+  <webResource name="guideSaved.jsp" path="/WEB-INF/pages/useeasy/auction/admin/guideSaved.jsp" location="4517,3545" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/pages/useeasy/auction/companyPayment/index.jsp" location="4540,4770" size="150,55" />
+  <webResource name="detail.jsp" path="/WEB-INF/pages/useeasy/auction/companyPayment/detail.jsp" location="4537,4595" size="150,55" />
+  <webResource name="zhuce.jsp" path="/zhuce.jsp" location="4531,5120" size="150,55" />
+  <webResource name="error.jsp" path="/error.jsp" location="4531,4945" size="150,55" />
+</Struts2Diagram>
+
